@@ -11,9 +11,9 @@ React
   :maxdepth: 1
   :caption: Guías
   
-  ../guias/react/pagina01.rst
-  ../guias/react/pagina02.rst
-  ../guias/react/pagina03.rst
-  ../guias/react/pagina04.rst
-  ../guias/react/pagina05.rst
-  ../guias/react/pagina06.rst
+  ../paginas/react/pagina01.rst
+  ../paginas/react/pagina02.rst
+  ../paginas/react/pagina03.rst
+  ../paginas/react/pagina04.rst
+  ../paginas/react/pagina05.rst
+  ../paginas/react/pagina06.rst

@@ -1,6 +1,6 @@
-==========
-Tutoriales
-==========
+==========================
+Tutoriales de Programación
+==========================
 
 .. toctree::
   :maxdepth: 1
