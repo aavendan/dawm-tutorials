@@ -4,8 +4,8 @@ import datetime
 
 # -- Project information
 
-project = 'Desarrollo de Aplicaciones Web y Móviles'	
-copyright = f'{datetime.datetime.now().year}, DAWM'
+project = 'Tutoriales'	
+copyright = f'{datetime.datetime.now().year}, tutoriales'
 author = 'Allan Avendaño'
 
 release = '0.1'
