@@ -1,10 +1,17 @@
-============================================
-Tutoriales de Desarrollo de Aplicaciones Web
-============================================
+==========
+Tutoriales
+==========
 
 .. toctree::
   :maxdepth: 1
-  :caption: Tutoriales
+  :caption: Lista de tecnologías y/o frameworks
   :glob:
 
   tutoriales/react.rst
+
+.. toctree::
+  :maxdepth: 1
+  :caption: Información importante
+  :glob:
+
+  informacion/*

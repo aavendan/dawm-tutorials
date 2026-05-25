@@ -4,7 +4,7 @@
    SPDX-License-Identifier: CC-BY-SA-4.0
 
 ===================================
-Guía 12: React y MUI - Introducción
+React y MUI - Introducción
 ===================================
 
 .. topic:: Objetivo específico

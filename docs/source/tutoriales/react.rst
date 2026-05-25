@@ -12,3 +12,8 @@ React
   :caption: Guías
   
   ../guias/react/pagina01.rst
+  ../guias/react/pagina02.rst
+  ../guias/react/pagina03.rst
+  ../guias/react/pagina04.rst
+  ../guias/react/pagina05.rst
+  ../guias/react/pagina06.rst
