@@ -1,5 +1,5 @@
-Desarrollo de Aplicaciones Web y Móviles - SOFG1006
+Tutorials
 =======================================
 
 Sitio web 
-https://dawm2.readthedocs.io/
+https://dawm-tutorials.readthedocs.io/
