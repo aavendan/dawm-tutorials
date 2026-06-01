@@ -176,7 +176,7 @@ MUI: Ubicación de elementos y Responsividad
 
       function App() {
          return (
-            <Grid container spacing={5} justifyContent="center" alignItems="center">
+            <Grid container spacing={5} sx={{ justifyContent: "center", alignItems: "center" }}>
                ...
             </Grid>
          );
