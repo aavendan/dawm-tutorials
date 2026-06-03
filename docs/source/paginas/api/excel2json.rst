@@ -21,8 +21,8 @@ Kaggle
 Selección del dataset
 ^^^^^^^^^^^^^^^^^^^^^
 
-1. Crear o acceder a una cuenta en [Kaggle](https://www.kaggle.com/).
-2. Seleccionar un dataset tabular, por ejemplo [Modeling wine](https://www.kaggle.com/datasets/willianoliveiragibin/modeling-wine?resource=download)
+1. Crear o acceder a una cuenta en `Kaggle <https://www.kaggle.com/>`_.
+2. Seleccionar un dataset tabular, por ejemplo `Modeling wine <https://www.kaggle.com/datasets/willianoliveiragibin/modeling-wine?resource=download>`_.
 3. Descargar el archivo del dataset, en formato .csv, .xlsx u otro formato tabular.
 
 Preparación del archivo
@@ -41,7 +41,7 @@ Luego, guarda o exporta el archivo en formato .xlsx, verificando que:
 Excel a JSON
 ------------
 
-1. Ingrese al servicio de conversión en línea [excel2json](https://excel2json.io/)
+1. Ingrese al servicio de conversión en línea `excel2json <https://excel2json.io/>`_
 2. Cargue el archivo Excel preparado.
 3. Configure la conversión según las opciones disponibles en la herramienta.
 4. Genera el archivo JSON y copia o descarga el resultado.
