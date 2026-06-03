@@ -4,7 +4,7 @@
    SPDX-License-Identifier: CC-BY-SA-4.0
 
 ==========================================
-Guía 10: Firebase: Realtime Database y SDK
+Firebase: Realtime Database y SDK
 ==========================================
 
 .. topic:: Objetivo específico
@@ -12,27 +12,18 @@ Guía 10: Firebase: Realtime Database y SDK
 
     Integrar Firebase Realtime Database utilizando su SDK para el almacenamiento y recuperación de datos en tiempo real permitiendo una experiencia de usuario dinámica e interactiva.
 
-Actividades previas
-=====================
-
-Firebase: Proyecto
-------------------
-
-1. Acceda a `Firebase <https://firebase.google.com/>`_ con su cuenta personal de Google.
-2. En `Firebase Console <https://console.firebase.google.com/>`_, cree el proyecto **landing**. No es necesario configurar Google Analytics para este proyecto.
-3. Utilice un cliente de IAG para explicar los servicios, y sus casos prácticos de uso, que ofrece Firebase.
-
 Actividades en clases
 =====================
 
-Firebase: App - web
--------------------
+Firebase
+--------
 
-1. En su proyecto de Firebase:
-   
-   a) Junto a **Project Overview**, despliegue el menú de configuración del proyecto y escoja **Project settings**.
-   b) En la pestaña **General**, desplácese hasta la sección **Your apps**.
-   c) Haga clic en el ícono de elemento HTML para crear una **web app**.
+Proyecto
+^^^^^^^^
+
+1. Acceda a `Firebase <https://firebase.google.com/>`_ con su cuenta personal de Google.
+2. En `Firebase Console <https://console.firebase.google.com/>`_, cree un proyecto con el nombre de su dataset. No es necesario configurar Google Analytics para este proyecto.
+3. Utilice un cliente de IAG para explicar los servicios, y sus casos prácticos de uso, que ofrece Firebase.
 
 Realtime Database
 ^^^^^^^^^^^^^^^^^
@@ -49,6 +40,17 @@ Realtime Database
       Esto es útil para pruebas, pero asegúrese de cambiar a un modo más seguro antes de desplegar su aplicación en producción.
 
 3. Utilice una cliente de IAG para explicar cómo se estructura la base de datos en tiempo real de Firebase.
+
+Datos
+^^^^^
+
+1. En la sección de **Realtime Database**, agregue un nuevo nodo con el nombre de su dataset.
+2. Dentro de este nodo, agregue un nuevo nodo con el nombre **data**, sin valor.
+3. Acceda al nodo **data** y seleccione la opción **Import JSON**.
+4. Importe el archivo JSON generado en la actividad de conversión de Excel a JSON, asegurándose de que la estructura del JSON sea compatible con la base de datos de Firebase.
+5. Verifique que los datos se hayan importado correctamente navegando por la estructura de la base de datos en tiempo real, al copiar la URL de la base de datos y accediendo a ella en el navegador.
+
+   **NOTA**: La URL de la base de datos tendrá el formato `https://<nombre-del-proyecto>.firebaseio.com/data.json`.
 
 Conclusiones
 ============
