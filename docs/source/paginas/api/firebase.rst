@@ -4,13 +4,13 @@
    SPDX-License-Identifier: CC-BY-SA-4.0
 
 ==========================================
-Firebase: Realtime Database y SDK
+Firebase: Realtime Database
 ==========================================
 
 .. topic:: Objetivo específico
     :class: objetivo
 
-    Integrar Firebase Realtime Database utilizando su SDK para el almacenamiento y recuperación de datos en tiempo real permitiendo una experiencia de usuario dinámica e interactiva.
+    Integrar Firebase Realtime Database para el almacenamiento y recuperación de datos en tiempo real permitiendo una experiencia de usuario dinámica e interactiva.
 
 Actividades en clases
 =====================
@@ -50,7 +50,9 @@ Datos
 4. Importe el archivo JSON generado en la actividad de conversión de Excel a JSON, asegurándose de que la estructura del JSON sea compatible con la base de datos de Firebase.
 5. Verifique que los datos se hayan importado correctamente navegando por la estructura de la base de datos en tiempo real, al copiar la URL de la base de datos y accediendo a ella en el navegador.
 
-   **NOTA**: La URL de la base de datos tendrá el formato `https://<nombre-del-proyecto>.firebaseio.com/data.json`.
+   **NOTA**: La URL de la base de datos tendrá el formato:
+   
+   `https://<nombre-del-proyecto>.firebaseio.com/data.json`.
 
 Conclusiones
 ============
