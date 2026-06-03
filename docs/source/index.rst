@@ -8,6 +8,7 @@ Tutoriales de Programación
   :glob:
 
   tutoriales/react.rst
+  tutoriales/api.rst
 
 .. toctree::
   :maxdepth: 1
