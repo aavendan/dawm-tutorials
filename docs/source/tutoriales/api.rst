@@ -11,6 +11,6 @@ API
   :maxdepth: 1
   :caption: Guías
   
-  ../paginas/react/kaggle.rst
-  ../paginas/react/excel2json.rst
-  ../paginas/react/firebase.rst
+  ../paginas/api/kaggle.rst
+  ../paginas/api/excel2json.rst
+  ../paginas/api/firebase.rst
