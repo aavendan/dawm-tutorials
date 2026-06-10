@@ -226,7 +226,7 @@ useFetchData
             .. tab-item:: Axios
 
                 .. code-block:: cmd
-                    :caption: Instalación de axios
+                    :caption: Instalación de axios desde la línea de comandos
                     :emphasize-lines: 1
 
                     npm install axios
