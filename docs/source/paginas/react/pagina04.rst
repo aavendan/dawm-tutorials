@@ -225,10 +225,38 @@ useFetchData
 
             .. tab-item:: Axios
 
-                .. code-block:: tsx
-                    :emphasize-lines: 7 - 16
+                .. code-block:: cmd
+                    :caption: Instalación de axios
+                    :emphasize-lines: 1
 
-                    abc
+                    npm install axios
+                
+
+                .. code-block:: tsx
+                    :emphasize-lines: 2, 10 - 16
+
+                    ...
+                    import axios from 'axios';
+
+                    export default function useFetchData() : OpenMeteoResponse | undefined {
+
+                        ...
+                        
+                        useEffect(() => {
+
+                            axios.get<OpenMeteoResponse>(URL)
+                                .then(response => {
+                                    setData(response.data);
+                                })
+                                .catch(error => {
+                                    console.error('Error fetching data:', error);
+                                });
+                        
+                        }, []); // El array vacío asegura que el efecto se ejecute solo una vez después del primer renderizado
+
+                        return ...;
+
+                    }
 
 
 5. Con un cliente de IAG, explique el uso del hook useEffect y la configuración del arreglo de dependencias.
