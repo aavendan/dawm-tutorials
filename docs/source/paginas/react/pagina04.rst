@@ -151,7 +151,7 @@ useFetchData
 
    a) Importe los hooks `useState` y `useEffect` de React.
    b) Importe la interfaz como tipos de datos (`type`)  `OpenMeteoResponse` del archivo `../types/DashboardTypes.tsx`. 
-   c) Declare que el componente `useFetchData` retorna un objeto del tipo `OpenMeteoResponse`.
+   c) Declare que el componente `useFetchData` retorna un objeto del tipo `OpenMeteoResponse` o `undefined`.
    
    .. dropdown:: Ver la solución 
         :color: success
@@ -161,11 +161,11 @@ useFetchData
             import { useEffect, useState } from 'react';
             import { type OpenMeteoResponse } from '../types/DashboardTypes';
 
-            export default function useFetchData() : OpenMeteoResponse { }
+            export default function useFetchData() : OpenMeteoResponse | undefined { }
 
 3. Dentro de `useFetchData`:
       
-   a) Declare la constante de estado `data` y la función de actualización `setData` del tipo `OpenMeteoResponse` (o `null`). El valor predeterminado es de tipo **null**.
+   a) Declare la constante de estado `data` y la función de actualización `setData` del tipo `OpenMeteoResponse` o `undefined`. 
    b) Defina la constante `URL` con el :term:`endpoint` de los datos de Open-Meteo.
    c) Agregue el hook `useEffect` para que reaccione **únicamente** después del primer renderizado del DOM.
    d) Retorne `data` al final del componente.
