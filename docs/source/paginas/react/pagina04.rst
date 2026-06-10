@@ -176,11 +176,11 @@ useFetchData
         .. code-block:: tsx
             :emphasize-lines: 3, 5, 7, 9
 
-            export default function useFetchData() : OpenMeteoResponse {
+            export default function useFetchData() : OpenMeteoResponse | undefined {
 
                 const  URL = 'https://api.open-meteo.com/v1/forecast ... ';
 
-                const [data, setData] = useState<OpenMeteoResponse>();
+                const [data, setData] = useState<OpenMeteoResponse | undefined>();
                 
                 useEffect(() => { }, []); // El array vacío asegura que el efecto se ejecute solo una vez después del primer renderizado
 
@@ -189,6 +189,37 @@ useFetchData
             }
 
 4. Dentro del función flecha del `useEffect`, realice un requerimiento asíncrono con la URL del endpoint. Al completarse la petición, actualice el estado `data` con la respuesta en formato JSON.
+
+    .. dropdown:: Ver la solución con fetch
+        :color: success
+        
+        .. code-block:: tsx
+            :emphasize-lines: 7 - 16
+
+            export default function useFetchData() : OpenMeteoResponse | undefined {
+
+                ...
+                
+                useEffect(() => {
+
+                    try {
+                        const response = await fetch(URL);
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        const jsonData: OpenMeteoResponse = await response.json();
+                        setData(jsonData);
+                    } catch (error) {
+                        console.error('Error fetching data:', error);
+                    }
+                
+                }, []); // El array vacío asegura que el efecto se ejecute solo una vez después del primer renderizado
+
+                return ...;
+
+            }
+
+
 5. Con un cliente de IAG, explique el uso del hook useEffect y la configuración del arreglo de dependencias.
 
 App.tsx
@@ -207,8 +238,7 @@ App.tsx
 
             ...
             const dataFetcherOutput = useFetchData();
-            ...
-       
+            
             return ( ... )
        }
 
@@ -221,16 +251,19 @@ App.tsx
         :color: success
     
         .. code-block:: tsx
-            :emphasize-lines: 3-7
+            :emphasize-lines: 6-11
     
             ...
-            <Grid size={{ xs: 12, md: 3 }}>
-                {dataFetcherOutput && 
-                    (<IndicatorUI     
-                        title='Temperatura (2m)' 
-                        description={ `${dataFetcherOutput.current.temperature_2m} ${dataFetcherOutput.current_units.temperature_2m}` } />)
-                }
-            </Grid>
+            {/* Indicadores */}
+            <Grid container size={{ xs: 12, md: 9 }} >
+
+                <Grid size={{ xs: 12, md: 3 }}>
+                    {dataFetcherOutput && 
+                        (<IndicatorUI     
+                            title='Temperatura (2m)' 
+                            description={ `${dataFetcherOutput.current.temperature_2m} ${dataFetcherOutput.current_units.temperature_2m}` } />)
+                    }
+                </Grid>
             ...
 
 3. Renderice los demás indicadores con los datos correspondientes de `dataFetcherOutput`.
