@@ -190,34 +190,45 @@ useFetchData
 
 4. Dentro del función flecha del `useEffect`, realice un requerimiento asíncrono con la URL del endpoint. Al completarse la petición, actualice el estado `data` con la respuesta en formato JSON.
 
-    .. dropdown:: Ver la solución con fetch
+   .. dropdown:: Ver la solución
         :color: success
+
+        .. tab-set::
+            
+            .. tab-item:: Fetch
         
-        .. code-block:: tsx
-            :emphasize-lines: 7 - 16
+                .. code-block:: tsx
+                    :emphasize-lines: 7 - 16
 
-            export default function useFetchData() : OpenMeteoResponse | undefined {
+                    export default function useFetchData() : OpenMeteoResponse | undefined {
 
-                ...
-                
-                useEffect(() => {
+                        ...
+                        
+                        useEffect(() => {
 
-                    try {
-                        const response = await fetch(URL);
-                        if (!response.ok) {
-                            throw new Error(`HTTP error! status: ${response.status}`);
-                        }
-                        const jsonData: OpenMeteoResponse = await response.json();
-                        setData(jsonData);
-                    } catch (error) {
-                        console.error('Error fetching data:', error);
+                            try {
+                                const response = await fetch(URL);
+                                if (!response.ok) {
+                                    throw new Error(`HTTP error! status: ${response.status}`);
+                                }
+                                const jsonData: OpenMeteoResponse = await response.json();
+                                setData(jsonData);
+                            } catch (error) {
+                                console.error('Error fetching data:', error);
+                            }
+                        
+                        }, []); // El array vacío asegura que el efecto se ejecute solo una vez después del primer renderizado
+
+                        return ...;
+
                     }
-                
-                }, []); // El array vacío asegura que el efecto se ejecute solo una vez después del primer renderizado
 
-                return ...;
+            .. tab-item:: Axios
 
-            }
+                .. code-block:: tsx
+                    :emphasize-lines: 7 - 16
+
+                    abc
 
 
 5. Con un cliente de IAG, explique el uso del hook useEffect y la configuración del arreglo de dependencias.
@@ -251,7 +262,7 @@ App.tsx
         :color: success
     
         .. code-block:: tsx
-            :emphasize-lines: 6-11
+            :emphasize-lines: 6-10
     
             ...
             {/* Indicadores */}
