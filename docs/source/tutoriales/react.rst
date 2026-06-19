@@ -9,7 +9,7 @@ React
 
 .. toctree::
   :maxdepth: 1
-  :caption: Guías
+  :caption: Tutoriales
   
   ../paginas/react/pagina01.rst
   ../paginas/react/pagina02.rst
