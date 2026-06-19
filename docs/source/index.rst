@@ -9,7 +9,6 @@ Tutoriales de Programación
 
   tutoriales/react.rst
   tutoriales/api.rst
-  tutoriales/react_one.rst
 
 .. toctree::
   :maxdepth: 1
