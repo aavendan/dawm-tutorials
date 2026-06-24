@@ -125,13 +125,6 @@ Documentación alternativa de la API
 
 5. Revise la documentación alternativa de su API mediante `ReDoc <https://redocly.github.io/redoc/>`_.
 
-Despliegue de la API
-----------------------
-
-1. Obtenga una cuenta en `FastAPI Cloud <https://fastapicloud.com/>`_ mediante su cuenta en GitHub.
-2. Seleccione su proyecto **api** y siga las instrucciones de despliegue.
-3. Verifique que su API esté funcionando correctamente en la URL proporcionada por FastAPI Cloud.
-
 Conclusiones
 ============
 
