@@ -90,6 +90,50 @@ Documentación interactiva de la API
 
 3. Explore la documentación alternativa de su API mediante Swagger UI en `https://swagger.io/tools/swagger-ui/`_.
 
+Documentación alternativa de la API
+-----------------------------------
+
+.. sidebar:: 
+
+   FastAPI genera un definición o descripción con toda tu API utilizando el estándar `OpenAPI <https://github.com/OAI/OpenAPI-Specification>`_ para definir APIs.
+
+1. Acceda a la documentación alternativa  de su API en `http://127.0.0.1:8000/redoc`_.
+2. Explore el endpoint `/` y pruebe la respuesta de su API utilizando la interfaz.
+3. Descargue la documentación de su API en formato JSON desde la opción **"Download OpenAPI specification"**, en la parte superior de la página.
+4. Analice el archivo JSON descargado para comprender la estructura de la documentación generada por FastAPI.
+
+   .. code-block:: json
+
+      {
+        "openapi": "3.1.0",
+        "info": {
+            "title": "FastAPI",
+            "version": "0.1.0"
+        },
+        "paths": {
+            "/": {
+            "get": {
+                "summary": "Read Root",
+                "operationId": "read_root__get",
+                "responses": {
+                "200": {
+                    "description": "Successful Response",
+                    "content": {
+                    "application/json": {
+                        "schema": {
+
+                        }
+                    }
+                    }
+                }
+                }
+            }
+            }
+        }
+        }
+
+5. Revise la documentación alternativa de su API mediante ReDoc en `https://redocly.github.io/redoc/`_.
+
 Conclusiones
 ============
 
