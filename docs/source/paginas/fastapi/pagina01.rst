@@ -111,26 +111,17 @@ Documentación alternativa de la API
             "version": "0.1.0"
         },
         "paths": {
-            "/": {
-            "get": {
-                "summary": "Read Root",
-                "operationId": "read_root__get",
-                "responses": {
-                "200": {
-                    "description": "Successful Response",
-                    "content": {
-                    "application/json": {
-                        "schema": {
+            "/items/": {
+                "get": {
+                    "responses": {
+                        "200": {
+                            "description": "Successful Response",
+                            "content": {
+                                "application/json": {
 
-                        }
-                    }
-                    }
-                }
-                }
-            }
-            }
-        }
-        }
+
+
+      ...
 
 5. Revise la documentación alternativa de su API mediante ReDoc en `https://redocly.github.io/redoc/`_.
 
