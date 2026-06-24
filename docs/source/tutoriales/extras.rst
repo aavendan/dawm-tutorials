@@ -11,5 +11,5 @@ Firebase Realtime Database
   :maxdepth: 1
   :caption: Tutoriales
   
-  ../paginas/api/excel2json.rst
-  ../paginas/api/firebase.rst
+  ../paginas/extras/excel2json.rst
+  ../paginas/extras/firebase.rst
