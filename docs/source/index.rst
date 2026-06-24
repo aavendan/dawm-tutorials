@@ -8,6 +8,7 @@ Tutoriales de Programación
   :glob:
 
   tutoriales/react.rst
+  tutoriales/fastapi.rst
   tutoriales/extras.rst
 
 .. toctree::

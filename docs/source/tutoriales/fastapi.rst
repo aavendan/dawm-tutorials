@@ -4,11 +4,11 @@
   SPDX-License-Identifier: CC-BY-SA-4.0
 
 ==========================================
-React - One
+Fast API
 ==========================================
 
 .. toctree::
   :maxdepth: 1
   :caption: Tutoriales
 
-  ../paginas/react_one/pagina01.rst
+  ../paginas/fastapi/pagina01.rst
