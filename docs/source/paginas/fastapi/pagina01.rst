@@ -52,3 +52,22 @@ main.py
       @app.get("/")
       def read_root():
           return {"message": "¡Hola, Fast API!"}
+
+
+Servidor de desarrollo
+----------------------
+
+1. Inicie el servidor de desarrollo ejecutando el siguiente comando en la terminal:
+
+   .. code-block:: bash
+
+      fastapi dev
+
+2. Abra su navegador web y acceda a `http://127.0.0.1:8000`_ para ver la respuesta de su API.
+3. Verifique que la respuesta sea un JSON con el mensaje:
+
+    .. code-block:: json
+    
+        {
+             "message": "¡Hola, Fast API!"
+        }
