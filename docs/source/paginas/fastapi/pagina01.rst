@@ -22,8 +22,19 @@ Ambiente de desarrollo
 1. Cree un repositorio en GitHub con el nombre *api*.
 
    a) Agregue un archivo README.md con el título de su API y una breve descripción del objetivo de su proyecto.
-   b) Agregue un archivo *.gitignore* con la plantilla de *Node*.
+   b) Agregue un archivo *.gitignore* con la plantilla de *Python*.
    
 2. Acceda a su proyecto *api* en Codespaces o en su máquina local.
 3. Cree y utilice la(s) rama(s) de desarrollo.
 
+Actividades en clases
+=====================
+
+1. Explore la documentación de `Fast API <https://fastapi.tiangolo.com/>`_ para comprender los conceptos básicos de este framework.
+2. Cree un proyecto con Fast API:
+
+    a) Dentro de la carpeta de su proyecto, abra la terminal y cree un nuevo proyecto:
+
+   .. code-block:: bash
+
+      pip install "fastapi[standard]"
