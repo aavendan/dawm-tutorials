@@ -66,8 +66,49 @@ Servidor de desarrollo
 2. Abra su navegador web y acceda a `http://127.0.0.1:8000`_ para ver la respuesta de su API.
 3. Verifique que la respuesta sea un JSON con el mensaje:
 
-    .. code-block:: json
+   .. code-block:: json
     
-        {
-             "message": "¡Hola, Fast API!"
-        }
+      {
+        "message": "¡Hola, Fast API!"
+      }
+
+Documentación interactiva de la API
+-----------------------------------
+
+1. Acceda a la documentación interactiva de su API en `http://127.0.0.1:8000/docs`_.
+2. Explore el endpoint `/` y pruebe la respuesta de su API utilizando la interfaz interactiva.
+
+    a) Haga clic en el botón "Try it out" para habilitar la prueba del endpoint.
+    b) Haga clic en el botón "Execute" para enviar la solicitud y ver la respuesta de su API.
+    c) Verifique que la respuesta sea un JSON con el mensaje:
+
+       .. code-block:: json
+    
+          {
+            "message": "¡Hola, Fast API!"
+          }
+
+3. Explore la documentación alternativa de su API mediante Swagger UI en `https://swagger.io/tools/swagger-ui/`_.
+
+Conclusiones
+============
+
+.. topic:: Preguntas de cierre
+
+    * ¿Qué es Fast API y cuáles son sus principales características?
+
+    * ¿Cómo se instala Fast API y Uvicorn en un proyecto de Python?
+
+    * ¿Cómo se crea un archivo *main.py* y se implementa un ejemplo básico de Fast API?
+
+Actividades autónomas
+=====================
+
+Recursos extras
+------------------------------
+
+En redes:
+
+.. raw:: html
+
+    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">There&#39;s now an official <a href="https://x.com/Redisinc?ref_src=twsrc%5Etfw">@Redisinc</a> SDK for FastAPI 🚀 <a href="https://t.co/3j91awnIhX">https://t.co/3j91awnIhX</a></p>&mdash; FastAPI (@FastAPI) <a href="https://x.com/FastAPI/status/2069729232922480959?ref_src=twsrc%5Etfw">June 24, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
