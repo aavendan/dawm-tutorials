@@ -78,15 +78,15 @@ Documentación interactiva de la API
 1. Acceda a la documentación interactiva de su API en `http://127.0.0.1:8000/docs`_.
 2. Explore el endpoint `/` y pruebe la respuesta de su API utilizando la interfaz interactiva.
 
-    a) Haga clic en el botón "Try it out" para habilitar la prueba del endpoint.
-    b) Haga clic en el botón "Execute" para enviar la solicitud y ver la respuesta de su API.
-    c) Verifique que la respuesta sea un JSON con el mensaje:
+   a) Haga clic en el botón "Try it out" para habilitar la prueba del endpoint.
+   b) Haga clic en el botón "Execute" para enviar la solicitud y ver la respuesta de su API.
+   c) Verifique que la respuesta sea un JSON con el mensaje:
 
-       .. code-block:: json
+      .. code-block:: json
     
-          {
+         {
             "message": "¡Hola, Fast API!"
-          }
+         }
 
 3. Explore la documentación alternativa de su API mediante Swagger UI en `https://swagger.io/tools/swagger-ui/`_.
 
@@ -139,11 +139,11 @@ Conclusiones
 
 .. topic:: Preguntas de cierre
 
-    * ¿Qué es Fast API y cuáles son sus principales características?
+    * ¿Qué tipo de tareas relacionadas con el desarrollo de una API en FastAPI podrían ser asistidas por una herramienta de inteligencia artificial generativa y cuáles deberían seguir siendo responsabilidad del desarrollador?
 
-    * ¿Cómo se instala Fast API y Uvicorn en un proyecto de Python?
+    * ¿Cómo podría utilizarse una IA generativa para detectar errores, redundancias o inconsistencias en una API desarrollada con FastAPI?
 
-    * ¿Cómo se crea un archivo *main.py* y se implementa un ejemplo básico de Fast API?
+    * ¿En qué medida el uso de IA generativa modifica las competencias que debe desarrollar un ingeniero de software al construir APIs?
 
 Actividades autónomas
 =====================
