@@ -85,9 +85,7 @@ Parámetros de ruta: tipo de datos
 
 .. sidebar::
 
-   .. note::
-   
-      Fast API utiliza `Pydantic <https://pydantic.dev/docs/>`_ para validar y serializar los datos de entrada y salida en las rutas del API.
+   Fast API utiliza `Pydantic <https://pydantic.dev/docs/>`_ para validar y serializar los datos de entrada y salida en las rutas del API.
 
 1. Modifique el archivo *main.py*, con el tipo de un parámetro de path en la función, usando anotaciones de tipos estándar de Python, con:
 
