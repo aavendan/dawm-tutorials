@@ -77,7 +77,7 @@ Parámetros de ruta
       def read_item(item_id):
          return {"item_id": item_id}
 
-2. Realice una solicitud GET a la ruta `http://127.0.0.1:8000/items/1` y observe la respuesta del servidor.
+2. Realice una solicitud GET a la ruta `http://127.0.0.1:8000/items/products` y observe la respuesta del servidor.
 3. Consulte con un cliente de IAG acerca de la respuesta del servidor y el valor del parámetro de ruta `item_id`.
 
 Parámetros de consulta
@@ -96,6 +96,9 @@ Parámetros de consulta
       @app.get("/items/{item_id}")
       def read_item(item_id, q: str = None):
          return {"item_id": item_id, "q": q}
+
+2. Realice una solicitud GET a la ruta `http://127.0.0.1:8000/items/products?q=example` y observe la respuesta del servidor.
+3. Consulte con un cliente de IAG acerca de la respuesta del servidor y el valor del parámetro de consulta `q`.
 
 Versionamiento
 --------------
