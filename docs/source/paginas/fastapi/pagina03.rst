@@ -7,6 +7,19 @@
 Fast API - Despliegue de la API
 ===================================
 
+.. topic:: Objetivo específico
+    :class: objetivo
+
+    Utilizar Fast API para crear un API RESTful, que permita la comunicación entre el cliente y el servidor, utilizando el protocolo HTTP.
+
+Actividades previas
+=====================
+
+Ambiente de desarrollo
+----------------------
+
+1. Acceda a su proyecto *api* en Codespaces o en su máquina local.
+
 Actividades en clases
 =====================
 
@@ -47,16 +60,30 @@ Módulos requeridos
 
 3. Consulte con un cliente de IAG acerca del contenido del archivo *requirements.txt* para verificar que contenga las dependencias necesarias para ejecutar su API.
 
+Fast API Cloud
+------------------
+
+.. sidebar:: 
+
+   `FastAPI Cloud <https://fastapicloud.com/>`_ está construido por el mismo autor y equipo detrás de FastAPI.
+
+   Agiliza el proceso de construir, desplegar y acceder a una API con el mínimo esfuerzo.
+
+1. Acceda a la página de `FastAPI Cloud <https://fastapicloud.com/>`_ y cree una cuenta gratuita mediante su cuenta de GitHub.
+2. Conecte su cuenta de GitHub con Fast API Cloud y seleccione el repositorio de su proyecto *api*.
+3. Haga clic en el botón *Deploy* para desplegar su API en la nube.
+4. Una vez desplegada, obtenga la URL de su API y verifique que esté funcionando correctamente.
+
 Conclusiones
 ============
 
 .. topic:: Preguntas de cierre
 
-    * 
+    * ¿Cuál es la URL de su API desplegada en FastAPI Cloud?
 
-    * 
+    * ¿Cuál es la diferencia entre ejecutar su API en un servidor local y desplegarla en la nube?
     
-    * 
+    * ¿Qué ventajas ofrece el despliegue en la nube para su API en comparación con un servidor local?
 
 
 Actividades autónomas
