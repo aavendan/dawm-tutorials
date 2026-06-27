@@ -57,3 +57,4 @@ En redes:
 
 .. raw:: html
 
+   <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://x.com/hashtag/LSPPDay23?src=hash&amp;ref_src=twsrc%5Etfw">#LSPPDay23</a><br><br>🔗 Built a mini URL Shortener API with FastAPI today. Learned how route parameters work and how backend applications map short codes to actual URLs through API endpoints.<a href="https://x.com/lftechnology?ref_src=twsrc%5Etfw">@lftechnology</a><a href="https://x.com/hashtag/60DaysOfLearning2026?src=hash&amp;ref_src=twsrc%5Etfw">#60DaysOfLearning2026</a> <a href="https://x.com/hashtag/LearningWithLeapfrog?src=hash&amp;ref_src=twsrc%5Etfw">#LearningWithLeapfrog</a> <a href="https://t.co/LUIKcdiGsA">pic.twitter.com/LUIKcdiGsA</a></p>&mdash; Preeyanka Khatri Xettri (@preeyanka07) <a href="https://x.com/preeyanka07/status/2070194299627790747?ref_src=twsrc%5Etfw">June 25, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
