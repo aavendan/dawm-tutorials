@@ -23,28 +23,28 @@ Ambiente de desarrollo
 Actividades en clases
 =====================
 
-Entorno Virtual
----------------
+Ambiente Virtual de Desarrollo
+------------------------------
 
-1. Cree un entorno virtual en la raíz de su proyecto, con el nombre *venv*, ejecutando el siguiente comando en la terminal:
+1. Cree un :term:`ambiente virtual de desarrollo` en la raíz de su proyecto, con el nombre *venv*, ejecutando el siguiente comando en la terminal:
 
    .. code-block:: bash
 
       python -m venv .venv
 
-2. Active el entorno virtual ejecutando el siguiente comando en la terminal:
+2. Active el ambiente virtual de desarrollo ejecutando el siguiente comando en la terminal:
 
    .. tab-set::
 
       .. tab-item:: Linux / macOS
-         .. code-block:: bash
+          .. code-block:: bash
 
-            source .venv/bin/activate 
+              source .venv/bin/activate 
       
       .. tab-item:: Windows
-         .. code-block:: bash
+          .. code-block:: bash
 
-            source .venv/Scripts/activate
+              source .venv/Scripts/activate
 
 Versionamiento
 --------------
