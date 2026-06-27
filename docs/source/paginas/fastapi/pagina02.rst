@@ -3,14 +3,14 @@
    Licensed under Creative Commons Attribution-ShareAlike 4.0 International License
    SPDX-License-Identifier: CC-BY-SA-4.0
 
-=========================================
-Fast API - Parámetros y Variables de Ruta
-=========================================
+===========================================
+Fast API - Parámetros de ruta y de consulta
+===========================================
 
 .. topic:: Objetivo específico
     :class: objetivo
 
-    Utilizar Fast API para crear un API RESTful, que permita la comunicación entre el cliente y el servidor, utilizando el protocolo HTTP.
+    Planificar y desarrollar un API RESTful utilizando Fast API, que permita la comunicación entre el cliente y el servidor, utilizando el protocolo HTTP mediante parámetros de ruta y de consulta.
 
 Actividades previas
 =====================

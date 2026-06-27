@@ -10,7 +10,7 @@ Fast API - Despliegue con FastAPI Cloud
 .. topic:: Objetivo específico
     :class: objetivo
 
-    Utilizar Fast API para crear un API RESTful, que permita la comunicación entre el cliente y el servidor, utilizando el protocolo HTTP.
+    Desplegar un API RESTful desarrollado con Fast API en la nube utilizando FastAPI Cloud, para permitir el acceso remoto y la comunicación entre el cliente y el servidor mediante el protocolo HTTP.
 
 Actividades previas
 =====================

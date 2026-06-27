@@ -10,7 +10,7 @@ Fast API - Response y Manejo de errores
 .. topic:: Objetivo específico
     :class: objetivo
 
-    Utilizar Fast API para crear un API RESTful, que permita la comunicación entre el cliente y el servidor, utilizando el protocolo HTTP.
+    Implementar un API RESTful utilizando Fast API, que permita la comunicación entre el cliente y el servidor, utilizando el protocolo HTTP, con manejo de errores y respuestas personalizadas.
 
 Actividades previas
 =====================
