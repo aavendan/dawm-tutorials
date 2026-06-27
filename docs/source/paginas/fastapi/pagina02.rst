@@ -48,6 +48,38 @@ Ambiente Virtual de Desarrollo
 
             source .venv/Scripts/activate
 
+Parámetros de ruta
+------------------
+
+1. Modifique el archivo *main.py*, con:
+
+   .. code-block:: python
+      :emphasize-lines: 6-8
+
+      ...
+
+      def read_root():
+          ...
+
+      @app.get("/items/{item_id}")
+      def read_item(item_id):
+         return {"item_id": item_id}
+
+
+Parámetros de consulta
+----------------------
+
+1. Modifique el archivo *main.py*, con:
+
+   .. code-block:: python
+      :emphasize-lines: 6-8
+
+      ...
+
+      @app.get("/items/{item_id}")
+      def read_item(item_id, q: str = None):
+         return {"item_id": item_id, "q": q}
+
 Versionamiento
 --------------
 
