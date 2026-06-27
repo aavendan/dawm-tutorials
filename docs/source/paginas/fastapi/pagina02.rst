@@ -37,14 +37,16 @@ Ambiente Virtual de Desarrollo
    .. tab-set::
 
       .. tab-item:: Linux / macOS
-          .. code-block:: bash
+         
+         .. code-block:: bash
 
-              source .venv/bin/activate 
+            source .venv/bin/activate 
       
       .. tab-item:: Windows
-          .. code-block:: bash
+         
+         .. code-block:: bash
 
-              source .venv/Scripts/activate
+            source .venv/Scripts/activate
 
 Versionamiento
 --------------
