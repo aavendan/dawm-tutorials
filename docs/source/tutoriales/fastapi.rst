@@ -12,3 +12,5 @@ Fast API
   :caption: Tutoriales
 
   ../paginas/fastapi/pagina01.rst
+  ../paginas/fastapi/pagina02.rst
+  ../paginas/fastapi/pagina03.rst

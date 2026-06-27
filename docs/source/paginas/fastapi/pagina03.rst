@@ -69,3 +69,4 @@ En redes:
 
 .. raw:: html
 
+    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">FastAPI Cloud is now in Public Beta ⚡<br><br>Deploy <a href="https://x.com/FastAPI?ref_src=twsrc%5Etfw">@FastAPI</a> apps with:<br><br>fastapi deploy<br><br>No waitlist. Try it now. 🚀<br><br>You Code. We Cloud. 😎<a href="https://t.co/HWeZyWbIiP">https://t.co/HWeZyWbIiP</a> <a href="https://t.co/V9OWV5cFHO">pic.twitter.com/V9OWV5cFHO</a></p>&mdash; FastAPI Cloud (@FastAPIcloud) <a href="https://x.com/FastAPIcloud/status/2069171493288755587?ref_src=twsrc%5Etfw">June 22, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
