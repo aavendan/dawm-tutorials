@@ -48,6 +48,18 @@ Ambiente Virtual de Desarrollo
 
             source .venv/Scripts/activate
 
+3. Instale los paquetes requeridos ejecutando el siguiente comando en la terminal:
+
+   .. code-block:: bash
+
+      pip install .
+
+4. Inicie el servidor de desarrollo ejecutando el siguiente comando en la terminal:
+
+   .. code-block:: bash
+
+      fastapi dev
+
 Parámetros de ruta
 ------------------
 
@@ -65,6 +77,8 @@ Parámetros de ruta
       def read_item(item_id):
          return {"item_id": item_id}
 
+2. Realice una solicitud GET a la ruta `http://127.0.0.1:8000/items/1` y observe la respuesta del servidor.
+3. Consulte con un cliente de IAG acerca de la respuesta del servidor y el valor del parámetro de ruta `item_id`.
 
 Parámetros de consulta
 ----------------------
@@ -75,6 +89,9 @@ Parámetros de consulta
       :emphasize-lines: 6-8
 
       ...
+
+      def read_root():
+          ...
 
       @app.get("/items/{item_id}")
       def read_item(item_id, q: str = None):
