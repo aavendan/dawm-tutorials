@@ -19,16 +19,32 @@ Ambiente de desarrollo
 ----------------------
 
 1. Acceda a su proyecto *api* en Codespaces o en su máquina local.
-2. Instale los paquetes y levante el servidor, con:
-
-   .. code-block:: bash
-
-      fastapi dev
-
 
 Actividades en clases
 =====================
 
+Entorno Virtual
+---------------
+
+1. Cree un entorno virtual en la raíz de su proyecto, con el nombre *venv*, ejecutando el siguiente comando en la terminal:
+
+   .. code-block:: bash
+
+      python -m venv .venv
+
+2. Active el entorno virtual ejecutando el siguiente comando en la terminal:
+
+   .. tab-set::
+
+      .. tab-item:: Linux / macOS
+         .. code-block:: bash
+
+            source .venv/bin/activate 
+      
+      .. tab-item:: Windows
+         .. code-block:: bash
+
+            source .venv/Scripts/activate
 
 Versionamiento
 --------------
