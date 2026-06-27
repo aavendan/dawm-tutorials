@@ -80,6 +80,32 @@ Parámetros de ruta
 2. Realice una solicitud GET a la ruta `/items/products` y observe la respuesta del servidor.
 3. Consulte con un cliente de IAG acerca de la respuesta del servidor y el valor del parámetro de ruta `item_id`.
 
+Parámetros de ruta: tipo de datos
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. sidebar::
+
+   .. note::
+   
+      Fast API utiliza `Pydantic <https://pydantic.dev/docs/>`_ para validar y serializar los datos de entrada y salida en las rutas del API.
+
+1. Modifique el archivo *main.py*, con el tipo de un parámetro de path en la función, usando anotaciones de tipos estándar de Python, con:
+
+   .. code-block:: python
+      :emphasize-lines: 7
+
+      ...
+
+      def read_root():
+          ...
+
+      @app.get("/items/{item_id}")
+      def read_item(item_id: int):
+         return {"item_id": item_id}
+
+2. Realice una solicitud GET a la ruta `/items/1` y observe la respuesta del servidor.
+3. Realice una solicitud GET a la ruta `/items/products` y observe la respuesta del servidor. Consulte con un cliente de IAG acerca de la respuesta del servidor y el valor del parámetro de ruta `item_id`.
+
 Parámetros de consulta
 ----------------------
 
@@ -94,10 +120,10 @@ Parámetros de consulta
           ...
 
       @app.get("/items/{item_id}")
-      def read_item(item_id, q: str = None):
+      def read_item(item_id, q = None):
          return {"item_id": item_id, "q": q}
 
-2. Realice una solicitud GET a la ruta `/items/products?q=example` y observe la respuesta del servidor.
+2. Realice una solicitud GET a la ruta `/items/1?q=example` y observe la respuesta del servidor.
 3. Consulte con un cliente de IAG acerca de la respuesta del servidor y el valor del parámetro de consulta `q`.
 
 Versionamiento
