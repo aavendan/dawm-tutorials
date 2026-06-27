@@ -125,6 +125,12 @@ Documentación alternativa de la API
 
 5. Revise la documentación alternativa de su API mediante `ReDoc <https://redocly.github.io/redoc/>`_.
 
+Versionamiento
+--------------
+
+1. Versione local y remotamente la(s) rama(s) de desarrollo en el repositorio *api*.
+2. Genere la(s) solicitud(es) de cambios (pull request) para la rama principal y apruebe los cambios.
+
 Conclusiones
 ============
 

@@ -60,6 +60,12 @@ Módulos requeridos
 
 3. Consulte con un cliente de IAG acerca del contenido del archivo *requirements.txt* para verificar que contenga las dependencias necesarias para ejecutar su API.
 
+Versionamiento
+--------------
+
+1. Versione local y remotamente la(s) rama(s) de desarrollo en el repositorio *api*.
+2. Genere la(s) solicitud(es) de cambios (pull request) para la rama principal y apruebe los cambios.
+
 Fast API Cloud
 ------------------
 
