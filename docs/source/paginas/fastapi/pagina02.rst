@@ -80,8 +80,8 @@ Parámetros de ruta
 2. Realice una solicitud GET a la ruta `/items/products` y observe la respuesta del servidor.
 3. Consulte con un cliente de IAG acerca de la respuesta del servidor y el valor del parámetro de ruta `item_id`.
 
-Parámetros de ruta: tipo de datos
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Tipo de datos
+^^^^^^^^^^^^^
 
 .. sidebar::
 
@@ -103,6 +103,7 @@ Parámetros de ruta: tipo de datos
 
 2. Realice una solicitud GET a la ruta `/items/1` y observe la respuesta del servidor.
 3. Realice una solicitud GET a la ruta `/items/products` y observe la respuesta del servidor. Consulte con un cliente de IAG acerca de la respuesta del servidor y el valor del parámetro de ruta `item_id`.
+4. Inspeccione la documentación interactiva (`http://localhost:8000/docs`) y alternativa (`http://localhost:8000/redoc`) de su API.
 
 Parámetros de consulta
 ----------------------
