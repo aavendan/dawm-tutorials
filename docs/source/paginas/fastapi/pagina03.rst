@@ -4,7 +4,7 @@
    SPDX-License-Identifier: CC-BY-SA-4.0
 
 =======================================
-Fast API - Response y Manejo de errores
+Fast API - Respuesta y Manejo de errores
 =======================================
 
 .. topic:: Objetivo específico

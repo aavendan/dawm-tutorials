@@ -136,11 +136,11 @@ Conclusiones
 
 .. topic:: Preguntas de cierre
 
-    * 
+    * Evalúe la importancia de la validación automática de datos antes de ejecutar la lógica de negocio de un endpoint. ¿Qué riesgos podrían presentarse si esta validación no existiera?
 
-    *
+    * Proponga la estructura de una API para gestionar productos de una tienda virtual utilizando los conceptos presentados en el tutorial. Describa los modelos necesarios, los endpoints principales y cómo aprovecharía la validación automática para minimizar errores.
 
-    *
+    * Valore el impacto que tendría reutilizar un mismo modelo de datos en múltiples endpoints de una API. ¿Cómo afecta esta decisión la mantenibilidad, consistencia y escalabilidad del proyecto?
 
 Actividades autónomas
 =====================
