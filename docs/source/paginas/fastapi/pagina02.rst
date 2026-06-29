@@ -117,7 +117,7 @@ Parámetros de consulta
 1. Modifique el archivo *main.py*, con:
 
    .. code-block:: python
-      :emphasize-lines: 3, 8-10
+      :emphasize-lines: 3, 8-11
 
       ...
 
@@ -128,10 +128,36 @@ Parámetros de consulta
 
       @app.get("/items/")
       def read_item(skip: int = 0, limit: int = 10):
-         return fake_items_db[skip : skip + limit]
+         results = fake_items_db[skip : skip + limit]
+         return results
 
 2. Realice una solicitud GET a la ruta `/items/?skip=0&limit=10` y observe la respuesta del servidor.
 3. Consulte con un cliente de IAG acerca de la respuesta del servidor y el valor de los parámetros de consulta `skip` y `limit`.
+
+Parámetros opcionales
+^^^^^^^^^^^^^^^^^^^^^
+
+1. Modifique el archivo *main.py*, con:
+
+   .. code-block:: python
+      :emphasize-lines: 9-13
+
+      ...
+
+      fake_items_db = [ ... ]
+
+      def read_root():
+          ...
+
+      @app.get("/items/")
+      def read_item(skip: int = 0, limit: int = 10, q: str | None = None):
+         results = fake_items_db[skip : skip + limit]
+         if q:
+            results.append({"q": q})
+         return results
+
+2. Consulte con un cliente de IAG acerca de la respuesta del servidor y el valor del parámetro de consulta opcional `q`.
+
 
 Versionamiento
 --------------
