@@ -65,6 +65,8 @@ Ambiente Virtual de Desarrollo
 
       fastapi dev
 
+5. Consulte con un cliente de IAG acerca del ambiente virtual de desarrollo y su importancia en la gestión de dependencias de un proyecto.
+
 Parámetros de ruta
 ------------------
 
@@ -115,19 +117,21 @@ Parámetros de consulta
 1. Modifique el archivo *main.py*, con:
 
    .. code-block:: python
-      :emphasize-lines: 6-8
+      :emphasize-lines: 3, 8-10
 
       ...
+
+      fake_items_db = [{"item_name": "Foo"}, {"item_name": "Bar"}, {"item_name": "Baz"}]
 
       def read_root():
           ...
 
-      @app.get("/items/{item_id}")
-      def read_item(item_id, q = None):
-         return {"item_id": item_id, "q": q}
+      @app.get("/items/")
+      def read_item(skip: int = 0, limit: int = 10):
+         return fake_items_db[skip : skip + limit]
 
-2. Realice una solicitud GET a la ruta `/items/1?q=example` y observe la respuesta del servidor.
-3. Consulte con un cliente de IAG acerca de la respuesta del servidor y el valor del parámetro de consulta `q`.
+2. Realice una solicitud GET a la ruta `/items/?skip=0&limit=10` y observe la respuesta del servidor.
+3. Consulte con un cliente de IAG acerca de la respuesta del servidor y el valor de los parámetros de consulta `skip` y `limit`.
 
 Versionamiento
 --------------
