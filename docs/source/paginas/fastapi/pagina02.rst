@@ -78,7 +78,7 @@ Parámetros de ruta
          return {"item_id": item_id}
 
 2. Realice una solicitud GET a la ruta `/items/products` y observe la respuesta del servidor.
-3. Consulte con un cliente de IAG acerca de la respuesta del servidor y el valor del parámetro de ruta `item_id`.
+3. Consulte con un cliente de IAG acerca de la respuesta del servidor y paso del valor del parámetro de ruta `item_id` como argumento de la función.
 
 Tipo de datos
 ^^^^^^^^^^^^^
@@ -87,7 +87,7 @@ Tipo de datos
 
    Fast API utiliza `Pydantic <https://pydantic.dev/docs/>`_ para validar y serializar los datos de entrada y salida en las rutas del API.
 
-1. Modifique el archivo *main.py*, con el tipo de un parámetro de path en la función, usando anotaciones de tipos estándar de Python, con:
+1. Modifique el archivo *main.py*, con:
 
    .. code-block:: python
       :emphasize-lines: 7
@@ -101,9 +101,8 @@ Tipo de datos
       def read_item(item_id: int):
          return {"item_id": item_id}
 
-2. Realice una solicitud GET a la ruta `/items/1` y observe la respuesta del servidor.
-3. Realice una solicitud GET a la ruta `/items/products` y observe la respuesta del servidor. Consulte con un cliente de IAG acerca de la respuesta del servidor y el valor del parámetro de ruta `item_id`.
-4. Inspeccione la documentación interactiva (`http://localhost:8000/docs`) y alternativa (`http://localhost:8000/redoc`) de su API.
+2. Utilice su navegador web para realizar una solicitud GET a las rutas `/items/1` y `/items/products`. Consulte con un cliente de IAG acerca de cómo el parámetro de ruta `item_id` pasa como argumento de la función usando anotaciones de tipos estándar de Python y sus limitaciones.
+3. Inspeccione la documentación interactiva (`http://localhost:8000/docs`) y alternativa (`http://localhost:8000/redoc`) de su API. Consulte con un cliente de IAG acerca de cómo se refleja el tipo de dato del parámetro de ruta `item_id` en la documentación.
 
 Parámetros de consulta
 ----------------------
