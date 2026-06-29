@@ -153,7 +153,7 @@ Parámetros opcionales
       def read_item(skip: int = 0, limit: int = 10, q: str | None = None):
          results = fake_items_db[skip : skip + limit]
          if q:
-            results.append({"q": q})
+            results.append({"item_name": q})
          return results
 
 2. Consulte con un cliente de IAG acerca de la respuesta del servidor y el valor del parámetro de consulta opcional `q`.
