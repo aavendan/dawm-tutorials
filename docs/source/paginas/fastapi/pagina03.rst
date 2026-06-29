@@ -42,6 +42,8 @@ Punto de partida (entrypoint)
         ├── pyproject.toml
         └── .gitignore
 
+2. Consulte con un cliente de IAG acerca de la función del archivo *pyproject.toml* y su relación con el despliegue de la API en FastAPI Cloud.
+
 Módulos requeridos
 ------------------
 
@@ -58,7 +60,7 @@ Módulos requeridos
 
       pipreqs . --force --ignore .venv
 
-3. Consulte con un cliente de IAG acerca del contenido del archivo *requirements.txt* para verificar que contenga las dependencias necesarias para ejecutar su API.
+3. Consulte con un cliente de IAG acerca del contenido del archivo *requirements.txt* con la ejecución de su API.
 
 Versionamiento
 --------------
