@@ -140,7 +140,7 @@ Parámetros opcionales
 1. Modifique el archivo *main.py*, con:
 
    .. code-block:: python
-      :emphasize-lines: 9-13
+      :emphasize-lines: 11-12
 
       ...
 
