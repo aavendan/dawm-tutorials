@@ -64,6 +64,9 @@ Punto de partida (entrypoint)
          "fastapi[standard]==<VERSION_ESTABLE_DE_FASTAPI>"
       ]
 
+      [tool.fastapi]
+      entrypoint = "main:app"
+
    
    **Nota:** Reemplace `<VERSION_ESTABLE_DE_FASTAPI>` con la versión estable de Fast API que desea utilizar.
    
