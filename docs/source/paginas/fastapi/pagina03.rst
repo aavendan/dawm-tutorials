@@ -19,11 +19,6 @@ Ambiente de desarrollo
 ----------------------
 
 1. Acceda a su proyecto *api* en Codespaces o en su máquina local.
-2. Fuera del ambiente virtual de desarrollo, instale las depedencias de su proyecto, con:
-
-   .. code-block:: bash
-
-      pip install .
 
 Actividades en clases
 =====================
