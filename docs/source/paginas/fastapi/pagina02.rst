@@ -51,7 +51,7 @@ Ambiente Virtual de Desarrollo
          
          .. code-block:: bash
 
-            source .venv/Scripts/activate
+            .venv/Scripts/activate
 
 3. Instale los paquetes requeridos ejecutando el siguiente comando en la terminal:
 
