@@ -23,27 +23,6 @@ Ambiente de desarrollo
 Actividades en clases
 =====================
 
-Punto de partida (entrypoint)
------------------------------
-
-1. En la raíz de su proyecto, cree un archivo llamado *pyproject.toml* y agregue el siguiente contenido:
-
-   .. code-block:: text
-
-      [tool.fastapi]
-      entrypoint = "main:app"
-
-   Considerando que la estructura del proyecto es la siguiente:
-
-   .. code-block:: text
-    
-       api/
-        ├── main.py
-        ├── pyproject.toml
-        └── .gitignore
-
-2. Consulte con un cliente de IAG acerca de la función del archivo *pyproject.toml* y su relación con el despliegue de la API en FastAPI Cloud.
-
 Módulos requeridos
 ------------------
 
@@ -60,7 +39,44 @@ Módulos requeridos
 
       pipreqs . --force --ignore .venv
 
-3. Consulte con un cliente de IAG acerca del contenido del archivo *requirements.txt* con la ejecución de su API.
+3. Modifique el archivo *requirements.txt* con la versión estable de Fast API:
+
+   .. code-block:: text
+
+      fastapi[standard]==<VERSION_ESTABLE_DE_FASTAPI>
+
+   **Nota:** Copie la `<VERSION_ESTABLE_DE_FASTAPI>` que aparece disponible.
+
+4. Consulte con un cliente de IAG acerca del contenido del archivo *requirements.txt* con la ejecución de su API.
+
+Punto de partida (entrypoint)
+-----------------------------
+
+1. En la raíz de su proyecto, cree un archivo llamado *pyproject.toml* y agregue el siguiente contenido:
+
+   .. code-block:: text
+
+      [project]
+      name = "main"
+      version = "0.1.0"
+      requires-python = ">=3.12"
+      dependencies = [
+         "fastapi[standard]==<VERSION_ESTABLE_DE_FASTAPI>"
+      ]
+
+   
+   **Nota:** Reemplace `<VERSION_ESTABLE_DE_FASTAPI>` con la versión estable de Fast API que desea utilizar.
+   
+   Considerando que la estructura del proyecto es la siguiente:
+
+   .. code-block:: text
+    
+       api/
+        ├── main.py
+        ├── pyproject.toml
+        └── .gitignore
+
+2. Consulte con un cliente de IAG acerca de la función del archivo *pyproject.toml* y su relación con el despliegue de la API en FastAPI Cloud.
 
 Versionamiento
 --------------
