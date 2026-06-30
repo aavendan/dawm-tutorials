@@ -53,19 +53,13 @@ Ambiente Virtual de Desarrollo
 
             .venv/Scripts/activate
 
-3. Instale los paquetes requeridos ejecutando el siguiente comando en la terminal:
-
-   .. code-block:: bash
-
-      pip install .
-
-4. Inicie el servidor de desarrollo ejecutando el siguiente comando en la terminal:
+3. Inicie el servidor de desarrollo ejecutando el siguiente comando en la terminal:
 
    .. code-block:: bash
 
       fastapi dev
 
-5. Consulte con un cliente de IAG acerca del ambiente virtual de desarrollo y su importancia en la gestión de dependencias de un proyecto.
+4. Consulte con un cliente de IAG acerca del ambiente virtual de desarrollo y su importancia en la gestión de dependencias de un proyecto.
 
 Parámetros de ruta
 ------------------
@@ -84,7 +78,7 @@ Parámetros de ruta
       def read_item(item_id):
          return {"item_id": item_id}
 
-2. Realice una solicitud GET a la ruta `/items/products` y observe la respuesta del servidor.
+2. Realice una solicitud GET a las rutas `/items/products` y `/items/2`. Analice las respuestas del servidor.
 3. Consulte con un cliente de IAG acerca de la respuesta del servidor y paso del valor del parámetro de ruta `item_id` como argumento de la función.
 
 Tipo de datos
@@ -140,7 +134,7 @@ Parámetros opcionales
 1. Modifique el archivo *main.py*, con:
 
    .. code-block:: python
-      :emphasize-lines: 11-12
+      :emphasize-lines: 9, 11-12
 
       ...
 
