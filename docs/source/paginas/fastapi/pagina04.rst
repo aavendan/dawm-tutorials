@@ -56,6 +56,26 @@ BaseModel de Pydantic
       def create_item(item: Item):
          return item
 
+3. Compruebe el funcionamiento de la función *create_item* con la herramienta *Swagger UI* y la documentación automática de Fast API.
+4. Utilice un cliente de IAG para explicar el funcionamiento de la función *create_item* y la importancia de la clase *BaseModel* de Pydantic en la validación de datos.
+
+Uso del modelo de datos en la respuesta
+---------------------------------------
+
+1. Modifique la función *create_item* para que retorne el diccionario del objeto *Item*, con el siguiente código:
+
+   .. code-block:: python
+      :emphasize-lines: 3-6
+
+      @app.post("/items/")
+      def create_item(item: Item):
+         item_dict = item.model_dump()
+         if item_dict is not None:
+            fake_items_db.append(item_dict)
+         return item_dict
+
+2. Compruebe el funcionamiento de la función *create_item* con la herramienta *Swagger UI* y la documentación automática de Fast API.
+3. Utilice un cliente de IAG para explicar el acceso a los atributos del objeto *Item* y la importancia de la función *model_dump()* en la conversión del objeto a un diccionario.
 
 Versionamiento
 --------------
