@@ -106,11 +106,11 @@ Conclusiones
 
 .. topic:: Preguntas de cierre
 
-    * ¿Cuál es la URL de su API desplegada en FastAPI Cloud?
+    * 
 
-    * ¿Cuál es la diferencia entre ejecutar su API en un servidor local y desplegarla en la nube?
+    * 
     
-    * ¿Qué ventajas ofrece el despliegue en la nube para su API en comparación con un servidor local?
+    * 
 
 
 Actividades autónomas

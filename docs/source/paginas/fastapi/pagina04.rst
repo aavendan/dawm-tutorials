@@ -91,9 +91,9 @@ Conclusiones
 
 .. topic:: Preguntas de cierre
 
-    * 
-
     *
+
+    * 
 
     *
 
