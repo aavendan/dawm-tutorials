@@ -35,6 +35,9 @@ BaseModel de Pydantic
 1. Cree una clase llamada *Item* que herede de la clase *BaseModel* en el archivo *models/item.py*, con los siguientes atributos:
 
    .. code-block:: python
+      :emphasize-lines: 1, 3-7
+
+      from pydantic import BaseModel
 
       class Item(BaseModel):
          item_name: str
