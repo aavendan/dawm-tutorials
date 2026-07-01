@@ -80,6 +80,23 @@ Uso del modelo de datos en la respuesta
 2. Compruebe el funcionamiento de la función *create_item* con la herramienta *Swagger UI* y la documentación automática de Fast API.
 3. Utilice un cliente de IAG para explicar el acceso a los atributos del objeto *Item* y la importancia de la función *model_dump()* en la conversión del objeto a un diccionario.
 
+Cuerpo de la solicitud + parámetros de ruta
+-------------------------------------------
+
+1. Agregue la función *update_item* para que reciba un objeto de tipo *Item* y un parámetro de ruta *item_id*, con el siguiente código:
+
+   .. code-block:: python
+      :emphasize-lines: 3-5
+
+      ...
+
+      @app.put("/items/{item_id}")
+      def update_item(item_id: int, item: Item):
+         return {"item_id": item_id, **item.model_dump()}
+
+2. Compruebe el funcionamiento de la función *update_item* con la herramienta *Swagger UI* y la documentación automática de Fast API.
+3. Utilice un cliente de IAG para explicar el funcionamiento de la función *update_item* y la importancia de combinar el cuerpo de la solicitud con los parámetros de ruta en una API RESTful.
+
 Versionamiento
 --------------
 
