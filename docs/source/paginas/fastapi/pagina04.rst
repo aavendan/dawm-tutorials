@@ -20,7 +20,13 @@ Ambiente de desarrollo
 
 1. Acceda a su proyecto *api* en Codespaces o en su máquina local.
 2. Acceda al ambiente virtual de desarrollo, de acuerdo con su sistema operativo.
-3. Instale los paquetes y levante el servidor, con:
+3. Instale las dependencias del proyecto, con:
+
+   .. code-block:: bash
+
+      python -m pip install -r requirements.txt
+
+4. Levante el servidor, con:
 
    .. code-block:: bash
 
