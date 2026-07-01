@@ -80,13 +80,13 @@ Uso del modelo de datos en la respuesta
 2. Compruebe el funcionamiento de la función *create_item* con la herramienta *Swagger UI* y la documentación automática de Fast API.
 3. Utilice un cliente de IAG para explicar el acceso a los atributos del objeto *Item* y la importancia de la función *model_dump()* en la conversión del objeto a un diccionario.
 
-Cuerpo de la solicitud + parámetros de ruta
+Cuerpo de la solicitud y parámetros de ruta
 -------------------------------------------
 
 1. Agregue la función *update_item* para que reciba un objeto de tipo *Item* y un parámetro de ruta *item_id*, con el siguiente código:
 
    .. code-block:: python
-      :emphasize-lines: 3-5
+      :emphasize-lines: 3-9
 
       ...
 
@@ -100,6 +100,30 @@ Cuerpo de la solicitud + parámetros de ruta
 
 2. Compruebe el funcionamiento de la función *update_item* con la herramienta *Swagger UI* y la documentación automática de Fast API.
 3. Utilice un cliente de IAG para explicar el funcionamiento de la función *update_item* y la importancia de combinar el cuerpo de la solicitud con los parámetros de ruta en una API RESTful.
+
+Cuerpo de la solicitud, parámetros de ruta y parámetros de consulta
+-------------------------------------------------------------------
+
+1. Agregue la función *update_item_with_query* para que reciba un objeto de tipo *Item*, un parámetro de ruta *item_name* y un parámetro de consulta *q*, con el siguiente código:
+
+   .. code-block:: python
+      :emphasize-lines: 3-10
+
+      ...
+
+      @app.put("/items/{item_name}/query")
+      def update_item_with_query(item_name: str, item: Item, q: str | None = None):
+         for i, fake_item in enumerate(fake_items_db):
+            if fake_item["item_name"] == item_name:
+               fake_items_db[i] = item.model_dump()
+               response = {"item_name": item_name, **item.model_dump()}
+               if q:
+                  response.update({"q": q})
+               return response
+         return {"error": "Item not found"}
+
+2. Compruebe el funcionamiento de la función *update_item_with_query* con la herramienta *Swagger UI* y la documentación automática de Fast API.
+3. Utilice un cliente de IAG para explicar el funcionamiento de la función *update_item_with_query* y la importancia de combinar el cuerpo de la solicitud, los parámetros de ruta y los parámetros de consulta en una API RESTful.
 
 Versionamiento
 --------------
