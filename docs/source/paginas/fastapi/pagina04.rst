@@ -107,7 +107,7 @@ Cuerpo de la solicitud, parámetros de ruta y parámetros de consulta
 1. Agregue la función *update_item_with_query* para que reciba un objeto de tipo *Item*, un parámetro de ruta *item_name* y un parámetro de consulta *q*, con el siguiente código:
 
    .. code-block:: python
-      :emphasize-lines: 3-10
+      :emphasize-lines: 3-12
 
       ...
 
