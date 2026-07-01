@@ -90,9 +90,13 @@ Cuerpo de la solicitud + parámetros de ruta
 
       ...
 
-      @app.put("/items/{item_id}")
-      def update_item(item_id: int, item: Item):
-         return {"item_id": item_id, **item.model_dump()}
+      @app.put("/items/{item_name}")
+      def update_item(item_name: str, item: Item):
+         for i, fake_item in enumerate(fake_items_db):
+            if fake_item["item_name"] == item_name:
+               fake_items_db[i] = item.model_dump()
+               return {"item_name": item_name, **item.model_dump()}
+         return {"error": "Item not found"}
 
 2. Compruebe el funcionamiento de la función *update_item* con la herramienta *Swagger UI* y la documentación automática de Fast API.
 3. Utilice un cliente de IAG para explicar el funcionamiento de la función *update_item* y la importancia de combinar el cuerpo de la solicitud con los parámetros de ruta en una API RESTful.
