@@ -159,11 +159,11 @@ Conclusiones
 
 .. topic:: Preguntas de cierre
 
-    * 
+    * Compare el uso de parámetros de consulta (Query) y parámetros de ruta (Path) ¿Qué criterios utilizaría para decidir cuál emplear en una API REST?
 
-    * 
+    * Evalúe el impacto que tiene la validación automática de datos sobre la seguridad y confiabilidad de una API. ¿Qué problemas podrían presentarse si los datos ingresados no fueran validados antes de procesarse?
 
-    * 
+    * Valore la utilidad de la documentación automática generada por FastAPI para equipos de desarrollo y consumidores externos de la API. ¿En qué situaciones representa una ventaja significativa frente a una documentación escrita manualmente?
 
 Actividades autónomas
 =====================

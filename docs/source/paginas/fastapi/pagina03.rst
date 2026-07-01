@@ -106,11 +106,11 @@ Conclusiones
 
 .. topic:: Preguntas de cierre
 
-    * 
+    * Examine el proceso de validación que realiza FastAPI antes de ejecutar un endpoint de actualización. ¿Cómo contribuye este proceso a reducir errores y mejorar la confiabilidad de la aplicación?
 
-    * 
+    * ¿Cuáles son las ventajas de utilizar FastAPI Cloud para desplegar una API en comparación con otros servicios de despliegue en la nube? Considere aspectos como facilidad de uso, integración con GitHub y escalabilidad.
     
-    * 
+    * ¿Qué consideraciones de seguridad y privacidad se deben tener en cuenta al desplegar una API en la nube utilizando FastAPI Cloud? ¿Cómo puede proteger los datos sensibles y garantizar el acceso seguro a la API?
 
 
 Actividades autónomas

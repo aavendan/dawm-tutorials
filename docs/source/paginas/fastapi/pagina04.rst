@@ -91,11 +91,11 @@ Conclusiones
 
 .. topic:: Preguntas de cierre
 
-    *
+    * Compare el uso de parámetros de consulta (Query), parámetros de ruta (Path) y datos enviados en el cuerpo de la solicitud (Body). ¿Qué criterios utilizaría para decidir cuál emplear en una API REST?
 
-    * 
+    * Justifique si una API debería eliminar permanentemente un recurso o implementar un mecanismo de eliminación lógica (soft delete). Fundamente su respuesta considerando aspectos de seguridad, auditoría y recuperación de información.
 
-    *
+    * Proponga una estrategia para registrar un historial de eliminaciones en una API. Explique qué información almacenaría (usuario, fecha, recurso eliminado, motivo, entre otros) y cómo este registro facilitaría las tareas de auditoría.
 
 Actividades autónomas
 =====================
