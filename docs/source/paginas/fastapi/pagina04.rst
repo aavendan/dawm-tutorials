@@ -4,7 +4,7 @@
    SPDX-License-Identifier: CC-BY-SA-4.0
 
 =======================================
-Fast API - Respuesta y Manejo de errores
+Fast API - Cuerpo de la solicitud y respuestas personalizadas
 =======================================
 
 .. topic:: Objetivo específico
@@ -19,7 +19,8 @@ Ambiente de desarrollo
 ----------------------
 
 1. Acceda a su proyecto *api* en Codespaces o en su máquina local.
-2. Instale los paquetes y levante el servidor, con:
+2. Acceda al ambiente virtual de desarrollo, de acuerdo con su sistema operativo.
+3. Instale los paquetes y levante el servidor, con:
 
    .. code-block:: bash
 
@@ -27,6 +28,33 @@ Ambiente de desarrollo
 
 Actividades en clases
 =====================
+
+BaseModel de Pydantic
+---------------------
+
+1. Cree una clase llamada *Item* que herede de la clase *BaseModel* en el archivo *models/item.py*, con los siguientes atributos:
+
+   .. code-block:: python
+
+      class Item(BaseModel):
+         item_name: str
+         description: str | None = None
+         price: float | None = None
+         tax: float | None = None
+
+2. Importe la clase *Item* en el archivo *main.py* y agregue la función *create_item* para que reciba un objeto de tipo *Item* como parámetro, con el siguiente código:
+
+   .. code-block:: python
+      :emphasize-lines: 2, 6-8
+
+      from fastapi import FastAPI
+      from models.item import Item
+
+      ...
+
+      @app.post("/items/")
+      def create_item(item: Item):
+         return item
 
 
 Versionamiento
