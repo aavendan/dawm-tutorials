@@ -35,6 +35,36 @@ Ambiente de desarrollo
 Actividades en clases
 =====================
 
+Python-Multipart
+----------------
+
+1. En la línea de comando de su proyecto *api*, ejecute el siguiente comando para instalar la dependencia *python-multipart*:
+
+   .. code-block:: bash
+
+      python -m pip install python-multipart
+
+2. Importe la clase *Form* *Annotated* en el archivo *main.py* y agregue la función *create_item* para que reciba los parámetros *item_name*, *description*, *price* y *tax* como datos de formulario, con el siguiente código:
+
+    .. code-block:: python
+        :emphasize-lines: 1,2, 6-13
+    
+        from typing import Annotated
+        from fastapi import FastAPI, Form
+    
+        ...
+
+        @app.post("/items_form/")
+        def create_item(
+            item_name: Annotated[str, Form()],
+            description: Annotated[str, Form()],
+            price: Annotated[float, Form()],
+            tax: Annotated[float, Form()]
+        ):
+            return {"item_name": item_name, "description": description, "price": price, "tax": tax}
+
+3. Compruebe el funcionamiento de la función *create_item* con la herramienta *Swagger UI* y la documentación automática de Fast API.
+4. Utilice un cliente de IAG para explicar la importancia de la clase *Form* en la recepción de datos de formulario y *Annotated* en la validación de datos.
 
 Versionamiento
 --------------
@@ -47,11 +77,11 @@ Conclusiones
 
 .. topic:: Preguntas de cierre
 
-    * Compare el uso de parámetros de consulta (Query), parámetros de ruta (Path) y datos enviados en el cuerpo de la solicitud (Body). ¿Qué criterios utilizaría para decidir cuál emplear en una API REST?
+    * 
 
-    * Justifique si una API debería eliminar permanentemente un recurso o implementar un mecanismo de eliminación lógica (soft delete). Fundamente su respuesta considerando aspectos de seguridad, auditoría y recuperación de información.
+    * 
 
-    * Proponga una estrategia para registrar un historial de eliminaciones en una API. Explique qué información almacenaría (usuario, fecha, recurso eliminado, motivo, entre otros) y cómo este registro facilitaría las tareas de auditoría.
+    * 
 
 Actividades autónomas
 =====================
