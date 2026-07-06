@@ -162,7 +162,7 @@ Estados de respuesta
 
         message = f"Item '{form_data.item_name}' created successfully with description '{form_data.description}', price {form_data.price}, and tax {form_data.tax}." 
 
-        fake_items_db.append(item_name)
+        fake_items_db.append({"item_name": item_name})
 
         return Response(content=message, status_code=201)
 
