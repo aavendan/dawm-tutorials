@@ -135,7 +135,7 @@ Estados de respuesta
 ---------------------
 
 201 Created
-^^^^^^^^^^^^
+^^^^^^^^^^^
 
 1. Modifique el archivo *main.py*, con:
 
@@ -166,7 +166,6 @@ Estados de respuesta
 
 2. Compruebe el funcionamiento de la función *create_item* con la herramienta *Swagger UI* y la documentación automática de Fast API.
 
-
 Versionamiento
 --------------
 
@@ -178,11 +177,11 @@ Conclusiones
 
 .. topic:: Preguntas de cierre
 
-    * 
+    * ¿Cuál es la diferencia entre recibir un objeto de tipo *Item* y recibir los parámetros como datos de formulario en una función de Fast API?
 
-    * 
+    * ¿Cuál es la importancia de la dependencia *python-multipart* en la recepción de datos de formulario en Fast API?
 
-    * 
+    * ¿Cuál es la diferencia entre retornar un estado de respuesta 200 (OK) y un estado de respuesta 201 (Created) en una función de Fast API?
 
 Actividades autónomas
 =====================
