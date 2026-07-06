@@ -131,7 +131,7 @@ Estados de respuesta
     b) Agregue la función *create_item* para que retorne un estado de respuesta 201 (Created) y un mensaje de éxito
 
     .. code-block:: python
-        :emphasize-lines: 1, 13-14
+        :emphasize-lines: 1, 14-16
     
         from fastapi import FastAPI, Form, Response
     
@@ -147,7 +147,8 @@ Estados de respuesta
             ...
 
             fake_items_db.append(item_name)
-            return Response(content="Item created successfully", status_code=201)
+
+            return Response(content=item_name, status_code=201)
 
 
 Versionamiento
