@@ -3,9 +3,9 @@
    Licensed under Creative Commons Attribution-ShareAlike 4.0 International License
    SPDX-License-Identifier: CC-BY-SA-4.0
 
-=======================================
+=====================================================
 Fast API - Datos de formulario y estados de respuesta
-=======================================
+=====================================================
 
 .. topic:: Objetivo específico
     :class: objetivo
@@ -44,7 +44,15 @@ Python-Multipart
 
       python -m pip install python-multipart
 
-2. Importe la clase *Form* *Annotated* en el archivo *main.py* y agregue la función *create_item* para que reciba los parámetros *item_name*, *description*, *price* y *tax* como datos de formulario, con el siguiente código:
+2. Utilice un cliente de IAG para explicar la importancia de la dependencia *python-multipart* en la recepción de datos de formulario.
+
+Datos de formulario
+-------------------
+
+1. Modifique el archivo *main.py*, con:
+
+    a) Importe la clase *Form* de la librería *fastapi* y la clase *Annotated* de la librería *typing*
+    b) Agregue la función *create_item* para que reciba los parámetros *item_name*, *description*, *price* y *tax* como datos de formulario
 
     .. code-block:: python
         :emphasize-lines: 1,2, 6-13
@@ -63,8 +71,84 @@ Python-Multipart
         ):
             return {"item_name": item_name, "description": description, "price": price, "tax": tax}
 
-3. Compruebe el funcionamiento de la función *create_item* con la herramienta *Swagger UI* y la documentación automática de Fast API.
-4. Utilice un cliente de IAG para explicar la importancia de la clase *Form* en la recepción de datos de formulario y *Annotated* en la validación de datos.
+2. Compruebe el funcionamiento de la función *create_item* con la herramienta *Swagger UI* y la documentación automática de Fast API. 
+3. Analice la diferencia entre la función *create_item* que recibe un objeto de tipo *Item* y la función *create_item* que recibe los parámetros como datos de formulario.
+
+Modelo de formulario de datos
+-----------------------------
+
+1. Cree una clase llamada *FormData* que herede de la clase *BaseModel* en el archivo *models/form_data.py*, con los siguientes atributos:
+
+   .. code-block:: python
+      :emphasize-lines: 1, 3-7
+
+      from pydantic import BaseModel
+
+      class FormData(BaseModel):
+        item_name: str
+        description: str
+        price: float
+        tax: float
+
+2. Modifique la función *create_item* para que reciba un objeto de tipo *FormData* como parámetro, en lugar de los parámetros individuales.
+
+    .. code-block:: python
+        :emphasize-lines: 2, 13-18, 20-23
+    
+        from fastapi import FastAPI, Form
+        from models.form_data import FormData
+    
+        ...
+
+        @app.post("/items_form/")
+        def create_item(
+            item_name: Annotated[str, Form()],
+            description: Annotated[str, Form()],
+            price: Annotated[float, Form()],
+            tax: Annotated[float, Form()]
+        ):
+            form_data = FormData(
+                item_name=item_name,
+                description=description,
+                price=price,
+                tax=tax
+            )
+
+            return {
+                "message": "Formulario recibido correctamente",
+                "data": form_data
+            }
+
+Estados de respuesta
+---------------------
+
+201 Created
+^^^^^^^^^^^^
+
+1. Modifique el archivo *main.py*, con:
+
+    a) Importe la clase *Response* de la librería *fastapi*
+    b) Agregue la función *create_item* para que retorne un estado de respuesta 201 (Created) y un mensaje de éxito
+
+    .. code-block:: python
+        :emphasize-lines: 1, 13-14
+    
+        from fastapi import FastAPI, Form, Response
+    
+        ...
+
+        @app.post("/items_form/")
+        def create_item(
+            item_name: Annotated[str, Form()],
+            description: Annotated[str, Form()],
+            price: Annotated[float, Form()],
+            tax: Annotated[float, Form()]
+        ):
+            ...
+
+            fake_items_db.append(item_name)
+            return Response(content="Item created successfully", status_code=201)
+
 
 Versionamiento
 --------------
