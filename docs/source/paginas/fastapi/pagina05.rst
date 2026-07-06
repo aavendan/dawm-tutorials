@@ -174,9 +174,9 @@ Estados de respuesta
    a) Agregue la función *create_item* para que retorne un estado de respuesta 400 (Bad Request) y un mensaje de error cuando el nombre del item ya exista en la base de datos simulada
 
    .. code-block:: python
-      :emphasize-lines: 14-16
+      :emphasize-lines: 1, 14-18
     
-      from fastapi import FastAPI, Form, Response
+      from fastapi import FastAPI, Form, Response, HTTPException, status
     
       ...
 
@@ -187,17 +187,19 @@ Estados de respuesta
         price: Annotated[float, Form()],
         tax: Annotated[float, Form()]
       ):
-            ...
+        ...
 
-        if item_name in fake_items_db:
-            message = f"Item '{item_name}' already exists."
-            return Response(content=message, status_code=400)
+        if tax < 0:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="Tax cannot be negative."
+            )
 
-        message = f"Item '{form_data.item_name}' created successfully with description '{form_data.description}', price {form_data.price}, and tax {form_data.tax}." 
-
-        fake_items_db.append(item_name)
+        ...
 
         return Response(content=message, status_code=201)
+
+2. Compruebe el funcionamiento de la función *create_item* con la herramienta *Swagger UI* y la documentación automática de Fast API.
 
 Versionamiento
 --------------
