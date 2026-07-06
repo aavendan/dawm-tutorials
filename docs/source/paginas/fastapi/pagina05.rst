@@ -68,9 +68,9 @@ Datos de formulario
    .. code-block:: python
       :emphasize-lines: 1,2, 6-12, 14
 
-      from typing import Annotated
       from fastapi import FastAPI, Form
-
+      from typing import Annotated
+      
       ...
 
       @app.post("/items_form/")
@@ -104,21 +104,21 @@ Modelo de formulario de datos
 
 2. Modifique la función *create_item* para que reciba un objeto de tipo *FormData* como parámetro, en lugar de los parámetros individuales.
 
-    .. code-block:: python
-       :emphasize-lines: 2, 14-19, 21, 23
+   .. code-block:: python
+      :emphasize-lines: 2, 14-19, 21, 23
     
-       from fastapi import FastAPI, Form
-       from models.form_data import FormData
+      from fastapi import FastAPI, Form
+      from models.form_data import FormData
     
-       ...
+      ...
 
-       @app.post("/items_form/")
-       def create_item(
-            item_name: Annotated[str, Form()],
-            description: Annotated[str, Form()],
-            price: Annotated[float, Form()],
-            tax: Annotated[float, Form()]
-       ):
+      @app.post("/items_form/")
+      def create_item(
+        item_name: Annotated[str, Form()],
+        description: Annotated[str, Form()],
+        price: Annotated[float, Form()],
+        tax: Annotated[float, Form()]
+      ):
 
         form_data = FormData(
             item_name=item_name,
@@ -163,6 +163,8 @@ Estados de respuesta
         fake_items_db.append(item_name)
 
         return Response(content=message, status_code=201)
+
+2. Compruebe el funcionamiento de la función *create_item* con la herramienta *Swagger UI* y la documentación automática de Fast API.
 
 
 Versionamiento
