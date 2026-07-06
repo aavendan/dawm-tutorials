@@ -20,6 +20,17 @@ Ambiente de desarrollo
 
 1. Acceda a su proyecto *api* en Codespaces o en su máquina local.
 2. Acceda al ambiente virtual de desarrollo, de acuerdo con su sistema operativo.
+
+   .. code-block:: bash
+
+      python -m venv .venv
+
+      # Para Linux / macOS
+      source .venv/bin/activate
+    
+      # Para Windows
+      .venv/Scripts/activate
+
 3. Instale las dependencias del proyecto, con:
 
    .. code-block:: bash
@@ -51,25 +62,25 @@ Datos de formulario
 
 1. Modifique el archivo *main.py*, con:
 
-    a) Importe la clase *Form* de la librería *fastapi* y la clase *Annotated* de la librería *typing*
-    b) Agregue la función *create_item* para que reciba los parámetros *item_name*, *description*, *price* y *tax* como datos de formulario
+   a) Importe la clase *Form* de la librería *fastapi* y la clase *Annotated* de la librería *typing*
+   b) Agregue la función *create_item* para que reciba los parámetros *item_name*, *description*, *price* y *tax* como datos de formulario
 
-    .. code-block:: python
-       :emphasize-lines: 1,2, 6-13
+   .. code-block:: python
+      :emphasize-lines: 1,2, 6-13
 
-       from typing import Annotated
-       from fastapi import FastAPI, Form
+      from typing import Annotated
+      from fastapi import FastAPI, Form
 
-       ...
+      ...
 
-       @app.post("/items_form/")
-       def create_item(
+      @app.post("/items_form/")
+      def create_item(
         item_name: Annotated[str, Form()],
         description: Annotated[str, Form()],
         price: Annotated[float, Form()],
         tax: Annotated[float, Form()]
-       ):
-        
+      ):
+
         return {"item_name": item_name, "description": description, "price": price, "tax": tax}
 
 2. Compruebe el funcionamiento de la función *create_item* con la herramienta *Swagger UI* y la documentación automática de Fast API. 
