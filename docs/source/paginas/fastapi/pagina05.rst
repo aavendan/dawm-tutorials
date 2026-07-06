@@ -131,6 +131,8 @@ Modelo de formulario de datos
 
         return message
 
+3. Compruebe el funcionamiento de la función *create_item* con la herramienta *Swagger UI* y la documentación automática de Fast API.
+
 Estados de respuesta
 ---------------------
 
