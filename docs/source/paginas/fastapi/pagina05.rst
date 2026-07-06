@@ -55,21 +55,22 @@ Datos de formulario
     b) Agregue la función *create_item* para que reciba los parámetros *item_name*, *description*, *price* y *tax* como datos de formulario
 
     .. code-block:: python
-        :emphasize-lines: 1,2, 6-13
-    
-        from typing import Annotated
-        from fastapi import FastAPI, Form
-    
-        ...
+       :emphasize-lines: 1,2, 6-13
 
-        @app.post("/items_form/")
-        def create_item(
-            item_name: Annotated[str, Form()],
-            description: Annotated[str, Form()],
-            price: Annotated[float, Form()],
-            tax: Annotated[float, Form()]
-        ):
-            return {"item_name": item_name, "description": description, "price": price, "tax": tax}
+       from typing import Annotated
+       from fastapi import FastAPI, Form
+
+       ...
+
+       @app.post("/items_form/")
+       def create_item(
+        item_name: Annotated[str, Form()],
+        description: Annotated[str, Form()],
+        price: Annotated[float, Form()],
+        tax: Annotated[float, Form()]
+       ):
+        
+        return {"item_name": item_name, "description": description, "price": price, "tax": tax}
 
 2. Compruebe el funcionamiento de la función *create_item* con la herramienta *Swagger UI* y la documentación automática de Fast API. 
 3. Analice la diferencia entre la función *create_item* que recibe un objeto de tipo *Item* y la función *create_item* que recibe los parámetros como datos de formulario.
@@ -93,31 +94,31 @@ Modelo de formulario de datos
 2. Modifique la función *create_item* para que reciba un objeto de tipo *FormData* como parámetro, en lugar de los parámetros individuales.
 
     .. code-block:: python
-        :emphasize-lines: 2, 13-18, 20-23
+       :emphasize-lines: 2, 14-19, 21, 23
     
-        from fastapi import FastAPI, Form
-        from models.form_data import FormData
+       from fastapi import FastAPI, Form
+       from models.form_data import FormData
     
-        ...
+       ...
 
-        @app.post("/items_form/")
-        def create_item(
+       @app.post("/items_form/")
+       def create_item(
             item_name: Annotated[str, Form()],
             description: Annotated[str, Form()],
             price: Annotated[float, Form()],
             tax: Annotated[float, Form()]
-        ):
-            form_data = FormData(
-                item_name=item_name,
-                description=description,
-                price=price,
-                tax=tax
-            )
+       ):
 
-            return {
-                "message": "Formulario recibido correctamente",
-                "data": form_data
-            }
+        form_data = FormData(
+            item_name=item_name,
+            description=description,
+            price=price,
+            tax=tax
+        )
+
+        message = f"Item '{form_data.item_name}' created successfully with description '{form_data.description}', price {form_data.price}, and tax {form_data.tax}." 
+
+        return message
 
 Estados de respuesta
 ---------------------
@@ -127,11 +128,11 @@ Estados de respuesta
 
 1. Modifique el archivo *main.py*, con:
 
-    a) Importe la clase *Response* de la librería *fastapi*
+    a) Importe la clase `Response <https://fastapi.tiangolo.com/reference/response/>`_ de la librería *fastapi*
     b) Agregue la función *create_item* para que retorne un estado de respuesta 201 (Created) y un mensaje de éxito
 
     .. code-block:: python
-        :emphasize-lines: 1, 14-16
+        :emphasize-lines: 1, 16, 18
     
         from fastapi import FastAPI, Form, Response
     
@@ -146,9 +147,11 @@ Estados de respuesta
         ):
             ...
 
+            message = f"Item '{form_data.item_name}' created successfully with description '{form_data.description}', price {form_data.price}, and tax {form_data.tax}." 
+
             fake_items_db.append(item_name)
 
-            return Response(content=item_name, status_code=201)
+            return Response(content=message, status_code=201)
 
 
 Versionamiento
