@@ -66,7 +66,7 @@ Datos de formulario
    b) Agregue la función *create_item* para que reciba los parámetros *item_name*, *description*, *price* y *tax* como datos de formulario
 
    .. code-block:: python
-      :emphasize-lines: 1,2, 6-13
+      :emphasize-lines: 1,2, 6-12, 14
 
       from typing import Annotated
       from fastapi import FastAPI, Form
@@ -139,30 +139,30 @@ Estados de respuesta
 
 1. Modifique el archivo *main.py*, con:
 
-    a) Importe la clase `Response <https://fastapi.tiangolo.com/reference/response/>`_ de la librería *fastapi*
-    b) Agregue la función *create_item* para que retorne un estado de respuesta 201 (Created) y un mensaje de éxito
+   a) Importe la clase `Response <https://fastapi.tiangolo.com/reference/response/>`_ de la librería *fastapi*
+   b) Agregue la función *create_item* para que retorne un estado de respuesta 201 (Created) y un mensaje de éxito
 
-    .. code-block:: python
-        :emphasize-lines: 1, 16, 18
+   .. code-block:: python
+      :emphasize-lines: 1, 16, 18
     
-        from fastapi import FastAPI, Form, Response
+      from fastapi import FastAPI, Form, Response
     
-        ...
+      ...
 
-        @app.post("/items_form/")
-        def create_item(
-            item_name: Annotated[str, Form()],
-            description: Annotated[str, Form()],
-            price: Annotated[float, Form()],
-            tax: Annotated[float, Form()]
-        ):
+      @app.post("/items_form/")
+      def create_item(
+        item_name: Annotated[str, Form()],
+        description: Annotated[str, Form()],
+        price: Annotated[float, Form()],
+        tax: Annotated[float, Form()]
+      ):
             ...
 
-            message = f"Item '{form_data.item_name}' created successfully with description '{form_data.description}', price {form_data.price}, and tax {form_data.tax}." 
+        message = f"Item '{form_data.item_name}' created successfully with description '{form_data.description}', price {form_data.price}, and tax {form_data.tax}." 
 
-            fake_items_db.append(item_name)
+        fake_items_db.append(item_name)
 
-            return Response(content=message, status_code=201)
+        return Response(content=message, status_code=201)
 
 
 Versionamiento
