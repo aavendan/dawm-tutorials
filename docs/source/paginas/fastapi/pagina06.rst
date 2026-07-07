@@ -107,7 +107,7 @@ Modelo de datos
 1. Cree el archivo *models/task.py* y cree una clase llamada *Task* que herede de la clase *BaseModel*, con los siguientes atributos:
 
    .. code-block:: python
-      :emphasize-lines: 1, 3-6
+      :emphasize-lines: 1, 3-7
 
       from pydantic import BaseModel
 
@@ -120,6 +120,7 @@ Modelo de datos
 2. Modifique el archivo *main.py* para importar la clase *Task* y agregue las funciones *create_task*, *get_tasks*, *get_task*, *update_task* y *delete_task* para realizar operaciones CRUD en la tabla *Task* de la base de datos Supabase.
 
    .. code-block:: python
+      :emphasize-lines: 3-5, 7-8, 12-18, 20-23
       
       ...
 
@@ -130,9 +131,11 @@ Modelo de datos
       load_dotenv()
       supabase: Client = create_client(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
 
+      ...
+
       @app.post("/tasks/")
       def create_task(task: Task):
-        data = supabase.table("tasks").insert({
+        data = supabase.table("task").insert({
             "title": task.title,
             "description": task.description
         }).execute()
@@ -140,7 +143,7 @@ Modelo de datos
 
       @app.get("/tasks/")
       def get_tasks():
-         data = supabase.table("tasks").select("*").execute()
+         data = supabase.table("task").select("*").execute()
          return data.data
 
 3. Utilice un cliente de IAG para explicar la importancia de la clase *Task* en la validación de datos y cómo se puede utilizar para representar los datos de la tabla *Task* en la API RESTful.
