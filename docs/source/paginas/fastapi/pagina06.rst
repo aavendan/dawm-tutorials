@@ -46,6 +46,104 @@ Ambiente de desarrollo
 Actividades en clases
 =====================
 
+Supabase
+--------
+
+1. Crea una cuenta en `Supabase <https://supabase.com/>`_ y cree un proyecto.
+2. En la pantalla inicial del proyecto, obtenga las variables de entorno necesarias para conectarse a la base de datos:
+
+   a) En el botón *Copy*, acceda a la opción *Get Connected*
+   b) Escoja la pestaña *Server / Build APIs* y copie la variables de entorno **SUPABASE_URL** y **SUPABASE_PUBLISHABLE_KEY**, que servirán para conectarse FastAPI con Supabase.
+
+3. Utilice un cliente de IAG para explicar la importancia de la base de datos Supabase en una API RESTful y cómo se puede utilizar para almacenar y recuperar datos de manera eficiente.
+
+Tabla: Item
+^^^^^^^^^^^
+
+1. En el panel lateral, acceda a la opción *SQL Editor* y cree una tabla llamada *Task* con los siguientes campos:
+
+   - id: integer, primary key, auto increment
+   - title: text, not null
+   - description: text, nullable
+   - created_at: timestamp, default current_timestamp
+
+   .. code-block:: sql
+
+      CREATE TABLE task (
+        id SERIAL PRIMARY KEY,
+        title VARCHAR(255) NOT NULL,
+        description TEXT,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+      );
+
+2. Ejecute la consulta SQL para crear la tabla **Run and enable RLS**. 
+3. Verifique que se haya creado correctamente en la base de datos en el panel lateral, en *Database* > *Schema Visualizer*.
+4. Utilice un cliente de IAG para explicar la importancia de *Run and enable RLS* en la tabla *Task* y cómo se puede utilizar para controlar el acceso a los datos de manera segura.
+
+FastAPI 
+-------
+
+Configuración
+^^^^^^^^^^^^^
+
+1. En la raíz del proyecto *api*, cree el archivo `.env` y agregue las variables de entorno **SUPABASE_URL** y **SUPABASE_PUBLISHABLE_KEY** con los valores obtenidos en el paso 2 de la sección *Supabase*.
+
+   .. code-block:: bash
+
+      SUPABASE_URL=<su_supabase_url>
+      SUPABASE_PUBLISHABLE_KEY=<su_supabase_publishable_key>
+
+2. Instale la dependencia *supabase* en el ambiente virtual de desarrollo, con:
+
+   .. code-block:: bash
+
+      python -m pip install supabase
+
+3. Utilice un cliente de IAG para explicar la importancia de la dependencia *supabase* en la conexión de FastAPI con la base de datos Supabase y cómo se puede utilizar para realizar operaciones CRUD en la tabla *Task*.
+ 
+Modelo de datos
+^^^^^^^^^^^^^^^
+
+1. Cree el archivo *models/task.py* y cree una clase llamada *Task* que herede de la clase *BaseModel*, con los siguientes atributos:
+
+   .. code-block:: python
+      :emphasize-lines: 1, 3-6
+
+      from pydantic import BaseModel
+
+      class Task(BaseModel):
+         id: int | None = None
+         title: str
+         description: str | None = None
+         created_at: str | None = None
+
+2. Modifique el archivo *main.py* para importar la clase *Task* y agregue las funciones *create_task*, *get_tasks*, *get_task*, *update_task* y *delete_task* para realizar operaciones CRUD en la tabla *Task* de la base de datos Supabase.
+
+   .. code-block:: python
+      
+      ...
+
+      from models.task import Task
+      from supabase import create_client, Client
+      from dotenv import load_dotenv
+
+      load_dotenv()
+      supabase: Client = create_client(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
+
+      @app.post("/tasks/")
+      def create_task(task: Task):
+        data = supabase.table("tasks").insert({
+            "title": task.title,
+            "description": task.description
+        }).execute()
+        return data.data
+
+      @app.get("/tasks/")
+      def get_tasks():
+         data = supabase.table("tasks").select("*").execute()
+         return data.data
+
+3. Utilice un cliente de IAG para explicar la importancia de la clase *Task* en la validación de datos y cómo se puede utilizar para representar los datos de la tabla *Task* en la API RESTful.
 
 Versionamiento
 --------------
