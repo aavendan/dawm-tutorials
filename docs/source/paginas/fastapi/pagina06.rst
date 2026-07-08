@@ -76,9 +76,9 @@ Tabla: Item
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
       );
 
-2. Ejecute la consulta SQL para crear la tabla **Run and enable RLS**. 
+2. Ejecute la consulta SQL para crear la tabla **Run without RLS**. 
 3. Verifique que se haya creado correctamente en la base de datos en el panel lateral, en *Database* > *Schema Visualizer*.
-4. Utilice un cliente de IAG para explicar la importancia de *Run and enable RLS* en la tabla *Task* y cómo se puede utilizar para controlar el acceso a los datos de manera segura.
+4. Utilice un cliente de IAG para explicar la importancia de *Run without RLS* en la tabla *Task* y cómo se puede utilizar para controlar el acceso a los datos de manera segura.
 
 FastAPI 
 -------
@@ -148,11 +148,52 @@ Modelo de datos
 
 3. Utilice un cliente de IAG para explicar la importancia de la clase *Task* en la validación de datos y cómo se puede utilizar para representar los datos de la tabla *Task* en la API RESTful.
 
-Versionamiento
---------------
+Despliegue
+----------
 
-1. Versione local y remotamente la(s) rama(s) de desarrollo en el repositorio *api*.
-2. Genere la(s) solicitud(es) de cambios (pull request) para la rama principal y apruebe los cambios.
+Módulos requeridos y Punto de partida (entrypoint)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1. Instale el módulo *Pipreqs* y genere el archivo *requirements.txt*
+
+   .. code-block:: bash
+
+      pip install pipreqs
+      pipreqs . --force --ignore .venv
+
+2. Verifique el archivo *requirements.txt* con los paquetes:
+
+   .. code-block:: text
+
+      fastapi[standard]==<VERSION_ESTABLE_DE_FASTAPI>
+      pydantic==<VERSION_ESTABLE_DE_PYDANTIC>
+      python-dotenv==<VERSION_ESTABLE_DE_PYTHON_DOTENV>
+      supabase==<VERSION_ESTABLE_DE_SUPABASE>
+
+3. Modifique el un archivo llamado *pyproject.toml*, con:
+
+   .. code-block:: text
+
+      ...
+      dependencies = [
+         "fastapi[standard]==<VERSION_ESTABLE_DE_FASTAPI>",
+         "pydantic==<VERSION_ESTABLE_DE_PYDANTIC>",
+         "python-dotenv==<VERSION_ESTABLE_DE_PYTHON_DOTENV>",
+         "supabase==<VERSION_ESTABLE_DE_SUPABASE>"
+      ]
+
+      ...
+
+4. Versione los cambios en el repositorio *api* y genere la(s) solicitud(es) de cambios (pull request) para la rama principal y apruebe los cambios.
+
+Fast API Cloud
+^^^^^^^^^^^^^^^
+
+1. Acceda a la aplicación *api* de `FastAPI Cloud <https://fastapicloud.com/>`_.
+2. En la pantalla inicial, haga clic en la opción *Environment Variables* y pegue el contenido del archivo `.env`.
+3. Haga click en el botón *Save and Redeploy* para desplegar la API RESTful en FastAPI Cloud.
+4. Verifique el acceso a la API RESTful en FastAPI Cloud, con la URL proporcionada en la pantalla inicial.
+
 
 Conclusiones
 ============
