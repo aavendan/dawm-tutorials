@@ -3,9 +3,9 @@
    Licensed under Creative Commons Attribution-ShareAlike 4.0 International License
    SPDX-License-Identifier: CC-BY-SA-4.0
 
-=====================================================
-Fast API - Supabase y testing de API RESTful
-=====================================================
+=================================
+Fast API - Supabase y API RESTful
+=================================
 
 .. topic:: Objetivo específico
     :class: objetivo
@@ -129,7 +129,7 @@ Modelo de datos
       from dotenv import load_dotenv
 
       load_dotenv()
-      supabase: Client = create_client(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
+      supabase: Client = create_client(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_PUBLISHABLE_KEY"))
 
       ...
 
@@ -159,11 +159,11 @@ Conclusiones
 
 .. topic:: Preguntas de cierre
 
-    * 
+    * ¿Cuál es la importancia de utilizar FastAPI para crear APIs RESTful y cómo se puede utilizar para mejorar la comunicación entre el cliente y el servidor?
 
-    * 
+    * ¿Cuál es la importancia de utilizar Supabase como base de datos en una API RESTful y cómo se puede utilizar para almacenar y recuperar datos de manera eficiente?
 
-    * 
+    * ¿Cómo se puede utilizar la clase *Task* para validar los datos de entrada en la API RESTful?
 
 Actividades autónomas
 =====================
