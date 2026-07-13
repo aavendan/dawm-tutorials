@@ -132,6 +132,8 @@ Get
       from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
       from supabase import create_client, Client
 
+      security = HTTPBearer()
+
       ... 
 
       def get_supabase_client(credentials: HTTPAuthorizationCredentials = Depends(security)) -> Client:
