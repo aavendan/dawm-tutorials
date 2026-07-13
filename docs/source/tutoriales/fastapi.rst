@@ -17,3 +17,4 @@ Fast API
   ../paginas/fastapi/pagina04.rst
   ../paginas/fastapi/pagina05.rst
   ../paginas/fastapi/pagina06.rst
+  ../paginas/fastapi/pagina07.rst
