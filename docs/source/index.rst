@@ -9,6 +9,7 @@ Tutoriales de Programación
 
   tutoriales/react.rst
   tutoriales/fastapi.rst
+  tutoriales/django.rst
   tutoriales/extras.rst
 
 .. toctree::
