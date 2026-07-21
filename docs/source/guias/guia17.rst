@@ -104,7 +104,7 @@ Comunicación entre componentes con hooks personalizados
 
        // Estrategia para convertir la opción seleccionada en un objeto
        const CITY_COORDS: Record<string, { latitude: number; longitude: number }> = {
-         'Guayaquil': { latitude: -2.1962, longitude: -79.8862 },
+         'guayaquil': { latitude: -2.1962, longitude: -79.8862 },
          ...
        };
 
@@ -117,7 +117,7 @@ Comunicación entre componentes con hooks personalizados
            
 
            // Parametrice la opción seleccionada en la URL del requerimiento asíncrono
-           const cityConfig = selectedOption != null? CITY_COORDS[selectedOption] : CITY_COORDS["Guayaquil"];
+           const cityConfig = selectedOption != null? CITY_COORDS[selectedOption] : CITY_COORDS["guayaquil"];
            const URL = `https://api.open-meteo.com/v1/forecast?latitude=${cityConfig.latitude}&longitude=${cityConfig.longitude}&...`
 
            fetch( URL )
