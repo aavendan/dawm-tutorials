@@ -12,3 +12,4 @@ Django
   :caption: Tutoriales
 
   ../paginas/django/pagina01.rst
+  ../paginas/django/pagina02.rst
