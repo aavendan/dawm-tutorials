@@ -72,17 +72,6 @@ Dashboard
 5. Inicie el servidor de desarrollo y revise los cambios en el navegador en la URL en la ruta raíz la aplicación.
 6. Utilice su cliente de IAG generativa para explicar :term:`Server Side Rendering (SSR)` en Django.
 
-Paquete: Requests
------------------
-
-1. Instale :term:`requests` en su ambiente de desarrollo:
-
-   .. code-block:: bash
-
-       pip install requests
-
-2. Utilice su cliente de IAG generativa para explicar el propósito del paquete *requests* en Python y cómo se utiliza para realizar solicitudes HTTP en Django.
-
 Herencia de plantillas
 ----------------------
 
@@ -229,7 +218,14 @@ Respuesta de APIs externas
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 1. Revise la estructura de la API `JSONPlaceholder <https://jsonplaceholder.typicode.com/posts>`_ y su propósito como un servicio de prueba para simular respuestas de APIs externas.
-2. Modifique el archivo ``backend_analytics_server/settings.py``, con: 
+
+2. Instale :term:`requests` en su ambiente de desarrollo:
+
+   .. code-block:: bash
+
+       pip install requests
+
+3. Modifique el archivo ``backend_analytics_server/settings.py``, con: 
 
    a) Agregue la constante **API_URL** con la URL de la API `JSONPlaceholder <https://jsonplaceholder.typicode.com/posts>`_.
 
@@ -239,8 +235,7 @@ Respuesta de APIs externas
        ...
        API_URL = 'https://jsonplaceholder.typicode.com/posts'
        ...
-
-3. Edite el archivo ``dashboard/views.py``, con:
+4. Edite el archivo ``dashboard/views.py``, con:
 
    a) Importe el paquete *requests* y el archivo *from django.conf import settings*.
    b) Realice una solicitud GET a la API de `JSONPlaceholder <https://jsonplaceholder.typicode.com/posts>`_ para obtener una lista de publicaciones.
@@ -270,7 +265,7 @@ Respuesta de APIs externas
 
            return render(request, 'dashboard/index.html', data)
 
-4. En el fragmento `templates/dashboard/content/data.html`, reemplace:
+5. En el fragmento `templates/dashboard/content/data.html`, reemplace:
  
    a) El texto **Indicador 1** por el texto **Número total de respuestas**, y
    b) El texto **Valor 1** por renderización de la variable **{{ total_responses }}**.
@@ -292,13 +287,13 @@ Respuesta de APIs externas
        </div>
        ...
 
-5. Revise los cambios en el navegador con la URL raíz.
+6. Revise los cambios en el navegador con la URL raíz.
 
    .. note:: 
 
       Cambie la variable **API_URL** en el archivo ``settings.py`` con la URL de la **Landing API**.
 
-6. Utilice su cliente de IAG generativa para explicar cómo se manejan las respuestas de APIs externas en Django y cómo se integran en la renderización del lado del servidor.
+7. Utilice su cliente de IAG generativa para explicar cómo se manejan las respuestas de APIs externas en Django y cómo se integran en la renderización del lado del servidor.
 
 Gestión de dependencias
 -----------------------
