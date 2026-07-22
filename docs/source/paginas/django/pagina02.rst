@@ -18,14 +18,9 @@ Actividades previas
 Ambiente de desarrollo
 ----------------------
 
-1. Cree un repositorio en GitHub con el nombre *django_backend*.
-
-   a) Agregue un archivo README.md con el título de su backend y una breve descripción del objetivo de su proyecto.
-   b) Agregue un archivo *.gitignore* con la plantilla de *Python*.
-   
-2. Acceda a su proyecto *django_backend* en Codespaces o en su máquina local.
-3. Cree y utilice la(s) rama(s) de desarrollo.
-4. Cree y habilite el ambiente virtual de desarrollo, con:
+1. Acceda a su proyecto *django_backend* en Codespaces o en su máquina local.
+2. Cree y utilice la(s) rama(s) de desarrollo.
+3. Cree y habilite el ambiente virtual de desarrollo, con:
 
    .. code-block:: bash
 
@@ -34,13 +29,13 @@ Ambiente de desarrollo
        env\Scripts\activate # Windows
        source env/bin/activate # Linux/MacOS
 
-5. Instale las dependencias necesarias para el proyecto, con:
+4. Instale las dependencias necesarias para el proyecto, con:
 
    .. code-block:: bash
 
        python -m pip install -r requirements.txt
 
-6. Levante el servidor de desarrollo de Django:
+5. Levante el servidor de desarrollo de Django:
 
    .. code-block:: bash
 
