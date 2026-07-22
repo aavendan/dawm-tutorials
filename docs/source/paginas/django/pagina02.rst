@@ -53,8 +53,8 @@ Actividades en clases
 
    Utilice la `Django - Introducción <https://tutoriales-de-programacion.readthedocs.io/es/latest/paginas/django/pagina01.html>`_ como referencia para la creación del proyecto y la aplicación, creación de vistas con plantillas y configuración de los archivos estáticos.
 
-
-------------------------------------
+Dashboard
+---------
 
 1. En la raíz del repositorio cree la carpeta `static` y la jerarquía `templates/dashboard`
 2. Cree una la aplicación *dashboard* y regístrela a la ruta raíz (\"\").
