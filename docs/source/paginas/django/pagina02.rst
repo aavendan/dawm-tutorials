@@ -34,6 +34,18 @@ Ambiente de desarrollo
        env\Scripts\activate # Windows
        source env/bin/activate # Linux/MacOS
 
+5. Instale las dependencias necesarias para el proyecto, con:
+
+   .. code-block:: bash
+
+       python -m pip install -r requirements.txt
+
+6. Levante el servidor de desarrollo de Django:
+
+   .. code-block:: bash
+
+       python manage.py runserver
+
 Actividades en clases
 =====================
 
