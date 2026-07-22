@@ -57,22 +57,20 @@ Backend Analytics Server y Dashboard
 ------------------------------------
 
 1. En la raíz del repositorio cree la carpeta `static` y la jerarquía `templates/dashboard`
-2. Instale `Django` en su ambiente de desarrollo.
-3. Cree un proyecto Django llamado *backend_analytics_server* en la ubicación actual, sin crear una aplicación.
-4. Cree una la aplicación *dashboard* y regístrela a la ruta raíz (\"\").
-5. Descargue, descomprima y ubique los archivos en las carpetas correspondientes:
+2. Cree una la aplicación *dashboard* y regístrela a la ruta raíz (\"\").
+3. Descargue, descomprima y ubique los archivos en las carpetas correspondientes:
 
    a) El archivo :download:`base.zip <./files/dashboard/base.zip>`. Ubique el archivo ``base.html`` en la carpeta `templates/dashboard/`.
    b) El archivo :download:`static.zip <./files/dashboard/static.zip>`. Ubique las carpetas dentro de `static/`.
 
-6. Renderice la plantilla ``base.html`` en la vista principal de la aplicación. Configure los archivos estáticos.
+4. Renderice la plantilla ``base.html`` en la vista principal de la aplicación. Configure los archivos estáticos.
 
    .. note:: 
 
       Reemplace las rutas de los archivos estáticos en la plantilla por las rutas relativas a la carpeta ``static`` del proyecto.
 
-7. Inicie el servidor de desarrollo y revise los cambios en el navegador en la URL en la ruta raíz la aplicación.
-8. Utilice su cliente de IAG generativa para explicar :term:`Server Side Rendering (SSR)` en Django.
+5. Inicie el servidor de desarrollo y revise los cambios en el navegador en la URL en la ruta raíz la aplicación.
+6. Utilice su cliente de IAG generativa para explicar :term:`Server Side Rendering (SSR)` en Django.
 
 Paquete: Requests
 -----------------
