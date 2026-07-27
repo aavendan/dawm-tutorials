@@ -18,7 +18,7 @@ Actividades previas
 Ambiente de desarrollo
 ----------------------
 
-1. Acceda a su proyecto *django_data_monitor* en Codespaces o en su máquina local.
+1. Acceda a su proyecto *django_backend* en Codespaces o en su máquina local.
 2. Cree y utilice la(s) rama(s) de desarrollo.
 3. Cree y habilite el ambiente virtual de desarrollo, con:
 
@@ -60,7 +60,7 @@ Migraciones de base de datos
 Configuración de dominios y CSRF
 ---------------------------------
 
-1. Modifique el archivo ``backend_analytics_server/settings.py``, con:
+1. Modifique el archivo ``django_backend/settings.py``, con:
 
    .. code-block:: python
        :emphasize-lines: 2-6, 8-10
@@ -122,7 +122,7 @@ Login: Vista y Plantilla de autenticación
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 1. Descargue y descomprima el archivo :download:`login.zip <./files/security/login.zip>`. Ubique el archivo ``login.html`` en la carpeta `templates/security/`.
-2. Modifique el archivo ``backend_analytics_server/urls.py``, con:
+2. Modifique el archivo ``django_backend/urls.py``, con:
 
    a) Importe las vistas predefinidas auth_views.
    b) Agregue las rutas con las vista (basadas en clases) asociadas con el inicio (LoginView) y con el cierre (LogoutView) de sesión.
@@ -144,7 +144,7 @@ Login: Vista y Plantilla de autenticación
 
       ]
 
-3. Modifique el archivo ``backend_analytics_server/settings.py``, con:
+3. Modifique el archivo ``django_backend/settings.py``, con:
 
    a) Agregue la constante **LOGIN_URL** con la URL de inicio de sesión.
    b) Agregue la constante **LOGOUT_REDIRECT_URL** con la URL raíz del proyecto.

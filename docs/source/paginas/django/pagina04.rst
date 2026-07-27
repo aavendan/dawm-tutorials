@@ -18,7 +18,7 @@ Actividades previas
 Ambiente de desarrollo
 ----------------------
 
-1. Acceda a su proyecto *django_data_monitor* en Codespaces o en su máquina local.
+1. Acceda a su proyecto *django_backend* en Codespaces o en su máquina local.
 2. Cree y utilice la(s) rama(s) de desarrollo.
 3. Cree y habilite el ambiente virtual de desarrollo, con:
 
@@ -255,7 +255,7 @@ Gestión de dependencias
 Versionamiento
 --------------
 
-1. Versione local y remotamente la(s) rama(s) de desarrollo en el repositorio *django_data_monitor*.
+1. Versione local y remotamente la(s) rama(s) de desarrollo en el repositorio *django_backend*.
 
    .. info-card:: 
 
