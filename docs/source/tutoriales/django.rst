@@ -13,3 +13,5 @@ Django
 
   ../paginas/django/pagina01.rst
   ../paginas/django/pagina02.rst
+  ../paginas/django/pagina03.rst
+  ../paginas/django/pagina04.rst
