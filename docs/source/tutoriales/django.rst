@@ -15,3 +15,4 @@ Django
   ../paginas/django/pagina02.rst
   ../paginas/django/pagina03.rst
   ../paginas/django/pagina04.rst
+  ../paginas/django/pagina05.rst
